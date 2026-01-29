@@ -1,0 +1,5 @@
+01_raw/fastq/
+02_work/
+04_logs/
+*.out
+*.err
