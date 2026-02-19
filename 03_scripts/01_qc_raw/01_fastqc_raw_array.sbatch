@@ -20,20 +20,10 @@ cd "$PROJECT_ROOT"
 OUT_FASTQC="${PROJECT_ROOT}/02_work/01_qc_raw/fastqc"
 mkdir -p "$OUT_FASTQC"
 
-# Hard check: exists + writable
-echo "[INFO] PWD: $(pwd)"
-echo "[INFO] OUT_FASTQC: $OUT_FASTQC"
-ls -ld "$OUT_FASTQC"
-test -w "$OUT_FASTQC" || { echo "[ERROR] Not writable: $OUT_FASTQC"; exit 1; }
-
 LINE=$(sed -n "$((SLURM_ARRAY_TASK_ID+1))p" "${PROJECT_ROOT}/00_admin/metadata/samples.tsv")
 SAMPLE=$(echo "$LINE" | cut -f1)
 R1=$(echo "$LINE" | cut -f2)
 R2=$(echo "$LINE" | cut -f3)
-
-echo "[INFO] Sample: $SAMPLE"
-echo "[INFO] R1: $R1"
-echo "[INFO] R2: $R2"
 
 fastqc -t "$SLURM_CPUS_PER_TASK" -o "$OUT_FASTQC" "$R1" "$R2"
 
