@@ -1,0 +1,7 @@
+[INFO] Sample: HSF4_6H_1
+[INFO] Running FastQC on: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/02_trim/fastp/HSF4_6H_1_1.trim.fq.gz and /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/02_trim/fastp/HSF4_6H_1_2.trim.fq.gz
+application/gzip
+application/gzip
+Analysis complete for HSF4_6H_1_2.trim.fq.gz
+Analysis complete for HSF4_6H_1_1.trim.fq.gz
+[INFO] Done: HSF4_6H_1
