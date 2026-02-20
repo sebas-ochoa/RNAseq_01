@@ -1,0 +1,49 @@
+Many modules are hidden in this stack. Use "module --show_hidden spider SOFTWARE" if you are not able to find the required software
+Detecting adapter sequence for read1...
+>Illumina TruSeq Adapter Read 1
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 58357914
+total bases: 8753687100
+Q20 bases: 8705315621(99.4474%)
+Q30 bases: 8497637527(97.075%)
+
+Read2 before filtering:
+total reads: 58357914
+total bases: 8753687100
+Q20 bases: 8681793759(99.1787%)
+Q30 bases: 8427137128(96.2696%)
+
+Read1 after filtering:
+total reads: 58138281
+total bases: 8229149254
+Q20 bases: 8191278808(99.5398%)
+Q30 bases: 8005427898(97.2814%)
+
+Read2 after filtering:
+total reads: 58138281
+total bases: 8229075088
+Q20 bases: 8178033261(99.3797%)
+Q30 bases: 7949537207(96.603%)
+
+Filtering result:
+reads passed filter: 116276562
+reads failed due to low quality: 419822
+reads failed due to too many N: 14272
+reads failed due to too short: 5172
+reads with adapter trimmed: 3019119
+bases trimmed due to adapters: 48603084
+
+Duplication rate: 31.0013%
+
+Insert size peak (evaluated by paired-end reads): 267
+
+JSON report: fastp.json
+HTML report: 02_work/02_trim/fastp/HSF4_0H_3.fastp.html
+
+fastp -i 01_raw/fastq/HSF4_0H_3_ZKRN250030470-1A_23F5KYLT4_L8_1.fq.gz -I 01_raw/fastq/HSF4_0H_3_ZKRN250030470-1A_23F5KYLT4_L8_2.fq.gz -o 02_work/02_trim/fastp/HSF4_0H_3_1.trim.fq.gz -O 02_work/02_trim/fastp/HSF4_0H_3_2.trim.fq.gz --detect_adapter_for_pe --trim_front1 8 --trim_front2 8 --cut_tail --cut_window_size 4 --cut_mean_quality 20 --length_required 25 --thread 8 --html 02_work/02_trim/fastp/HSF4_0H_3.fastp.html 
+fastp v0.23.4, time used: 195 seconds

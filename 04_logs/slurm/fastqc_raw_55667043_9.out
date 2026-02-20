@@ -1,0 +1,11 @@
+[INFO] PWD: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25
+[INFO] OUT_FASTQC: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/01_qc_raw/fastqc
+drwxrwx--- 2 jochoa jochoa-group 4096 Jan 29 20:15 /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/01_qc_raw/fastqc
+[INFO] Sample: HSF4_4H_3
+[INFO] R1: 01_raw/fastq/HSF4_4H_3_ZKRN250030476-1A_23F5KYLT4_L7_1.fq.gz
+[INFO] R2: 01_raw/fastq/HSF4_4H_3_ZKRN250030476-1A_23F5KYLT4_L7_2.fq.gz
+application/gzip
+application/gzip
+Analysis complete for HSF4_4H_3_ZKRN250030476-1A_23F5KYLT4_L7_1.fq.gz
+Analysis complete for HSF4_4H_3_ZKRN250030476-1A_23F5KYLT4_L7_2.fq.gz
+[INFO] Done: HSF4_4H_3
