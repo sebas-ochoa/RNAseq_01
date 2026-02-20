@@ -8,6 +8,7 @@
 #SBATCH --array=1-12
 
 set -euo pipefail
+umask 007
 
 on_error() {
   local line="$1"
@@ -25,14 +26,24 @@ PROJECT_ROOT="${SLURM_SUBMIT_DIR:?SLURM_SUBMIT_DIR is empty}"
 cd "$PROJECT_ROOT"
 
 TRIM_DIR="${PROJECT_ROOT}/02_work/02_trim/fastp"
-OUT_FASTQC="${PROJECT_ROOT}/02_work/03_qc_trim/fastqc"
-mkdir -p "$OUT_FASTQC"
+OUT_BASE="${PROJECT_ROOT}/02_work/03_qc_trim"
+OUT_FASTQC="${OUT_BASE}/fastqc"
+mkdir -p "$OUT_BASE" "$OUT_FASTQC"
+chmod 2770 "$OUT_BASE" "$OUT_FASTQC" 2>/dev/null || true
 
 if [[ ! -d "$OUT_FASTQC" || ! -w "$OUT_FASTQC" ]]; then
   echo "[ERROR] Output directory is missing or not writable: $OUT_FASTQC" >&2
-  ls -ld "$OUT_FASTQC" "$(dirname "$OUT_FASTQC")" >&2 || true
+  ls -ld "$OUT_BASE" "$OUT_FASTQC" >&2 || true
   exit 1
 fi
+
+WRITE_PROBE="${OUT_FASTQC}/.write_test_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
+if ! touch "$WRITE_PROBE" 2>/dev/null; then
+  echo "[ERROR] Could not create file in output directory: $OUT_FASTQC" >&2
+  ls -ld "$OUT_BASE" "$OUT_FASTQC" >&2 || true
+  exit 1
+fi
+rm -f "$WRITE_PROBE"
 
 LINE=$(sed -n "$((SLURM_ARRAY_TASK_ID+1))p" "${PROJECT_ROOT}/00_admin/metadata/samples.tsv")
 if [[ -z "$LINE" ]]; then
