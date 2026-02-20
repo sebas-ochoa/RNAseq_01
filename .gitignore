@@ -1,14 +1,5 @@
-01_raw/
-02_work/
-04_logs/
-90_scratch/
-*.out
-*.err
-00_admin/metadata/fastq_manifest.txt
 .vscode/
 01_raw/
-02_work/
-04_logs/
 90_scratch/
 00_admin/env/
 *.fastq.gz
@@ -18,3 +9,4 @@
 *.cram
 *.vcf
 *.json
+*.zip
