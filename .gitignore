@@ -10,3 +10,4 @@
 *.vcf
 *.json
 *.zip
+.DS_Store

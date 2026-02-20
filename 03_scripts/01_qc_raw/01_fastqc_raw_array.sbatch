@@ -5,7 +5,7 @@
 #SBATCH --time=02:00:00
 #SBATCH --output=04_logs/slurm/%x_%A_%a.out
 #SBATCH --error=04_logs/slurm/%x_%A_%a.err
-#SBATCH --array=1-24
+#SBATCH --array=1-12
 
 set -euo pipefail
 
