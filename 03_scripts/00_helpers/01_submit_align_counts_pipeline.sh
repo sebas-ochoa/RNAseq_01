@@ -42,26 +42,39 @@ fi
 echo "[INFO] Running preflight checks..."
 ensure_writable_dir "$SLURM_LOG_DIR"
 ensure_writable_dir "$TMP_ROOT"
-ensure_writable_dir "$REFERENCE_DIR"
-ensure_writable_dir "$STAR_INDEX_DIR"
 ensure_writable_dir "$ALIGN_DIR"
 ensure_writable_dir "$ALIGN_QC_DIR"
 ensure_writable_dir "$STRAND_SWEEP_DIR"
 ensure_writable_dir "$COUNTS_DIR"
 ensure_writable_dir "${PROJECT_ROOT}/00_admin/metadata"
 
-echo "[INFO] Samples detected: $N_SAMPLES"
+if [[ ! -d "$STAR_INDEX_DIR" || ! -s "${STAR_INDEX_DIR}/SA" ]]; then
+  echo "[ERROR] STAR index not found/complete in: $STAR_INDEX_DIR" >&2
+  echo "[ERROR] Build index first (e.g., 03_scripts/04_ref/02_star_index.sbatch)." >&2
+  exit 1
+fi
 
-J_DOWNLOAD=$(sbatch --parsable "${PROJECT_ROOT}/03_scripts/04_ref/01_download_reference.sbatch")
-J_INDEX=$(sbatch --parsable --dependency="afterok:${J_DOWNLOAD}" "${PROJECT_ROOT}/03_scripts/04_ref/02_star_index.sbatch")
-J_ALIGN=$(sbatch --parsable --array="1-${N_SAMPLES}" --dependency="afterok:${J_INDEX}" "${PROJECT_ROOT}/03_scripts/05_align/01_star_align_trim_array.sbatch")
+if [[ ! -s "$GTF" ]]; then
+  echo "[ERROR] GTF not found: $GTF" >&2
+  echo "[ERROR] Set GTF path in 00_admin/config/pipeline.env or place it under REFERENCE_DIR." >&2
+  exit 1
+fi
+
+if ! compgen -G "${TRIM_DIR}/*_1.trim.fq.gz" > /dev/null; then
+  echo "[ERROR] No trimmed FASTQ files found in: $TRIM_DIR" >&2
+  echo "[ERROR] Run trimming first." >&2
+  exit 1
+fi
+
+echo "[INFO] Samples detected: $N_SAMPLES"
+echo "[INFO] Starting from alignment stage (download/index skipped)."
+
+J_ALIGN=$(sbatch --parsable --array="1-${N_SAMPLES}" "${PROJECT_ROOT}/03_scripts/05_align/01_star_align_trim_array.sbatch")
 J_ALIGN_QC=$(sbatch --parsable --dependency="afterok:${J_ALIGN}" "${PROJECT_ROOT}/03_scripts/05_align/02_align_qc_multiqc.sbatch")
 J_SWEEP=$(sbatch --parsable --dependency="afterok:${J_ALIGN}" "${PROJECT_ROOT}/03_scripts/06_counts/01_featurecounts_strand_sweep.sbatch")
 J_FINAL=$(sbatch --parsable --dependency="afterok:${J_SWEEP}" "${PROJECT_ROOT}/03_scripts/06_counts/02_featurecounts_final.sbatch")
 
 echo "[INFO] Submitted pipeline with dependencies:"
-printf "  %-24s %s\n" "reference_download" "$J_DOWNLOAD"
-printf "  %-24s %s\n" "star_index" "$J_INDEX"
 printf "  %-24s %s\n" "star_align_array" "$J_ALIGN"
 printf "  %-24s %s\n" "align_multiqc" "$J_ALIGN_QC"
 printf "  %-24s %s\n" "strand_sweep" "$J_SWEEP"
