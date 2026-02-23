@@ -1,0 +1,13 @@
+[INFO] Sample: HSF4_4H_2
+[INFO] R1: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/02_trim/fastp/HSF4_4H_2_1.trim.fq.gz
+[INFO] R2: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/02_trim/fastp/HSF4_4H_2_2.trim.fq.gz
+	STAR --runThreadN 8 --genomeDir /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/04_ref/star_index --readFilesIn /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/02_trim/fastp/HSF4_4H_2_1.trim.fq.gz /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/02_trim/fastp/HSF4_4H_2_2.trim.fq.gz --readFilesCommand zcat --outFileNamePrefix /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/05_align/star/HSF4_4H_2. --outSAMtype BAM SortedByCoordinate --outSAMattributes NH HI AS nM XS --outTmpDir /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/58212853_8/star_HSF4_4H_2 --limitBAMsortRAM 8000000000
+	STAR version: 2.7.10b   compiled: 2024-07-09T13:52:00+00:00 eu-g1-005-1:/dev/shm/ngapps/spack-stage-star-2.7.10b-5yphxwf4df7lnjernjy47yq672roeiiu/spack-src/source
+Feb 23 11:34:37 ..... started STAR run
+Feb 23 11:34:37 ..... loading genome
+Feb 23 11:34:51 ..... started mapping
+Feb 23 11:44:23 ..... finished mapping
+Feb 23 11:44:24 ..... started sorting BAM
+Feb 23 11:46:36 ..... finished successfully
+[INFO] Done: HSF4_4H_2
+[INFO] BAM: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/05_align/star/HSF4_4H_2.sorted.bam

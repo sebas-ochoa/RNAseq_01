@@ -1,0 +1,11 @@
+[INFO] Running preflight checks...
+[INFO] Samples detected: 12
+[INFO] Starting from alignment stage (download/index skipped).
+[INFO] Submitted pipeline with dependencies:
+  star_align_array         58212757
+  align_multiqc            58212761
+  strand_sweep             58212769
+  final_featurecounts      58212772
+[INFO] Track jobs with:
+  squeue -u jochoa
+  sacct -j 58212772 --format=JobID,JobName%30,State,ExitCode,Elapsed,MaxRSS,NCPUS

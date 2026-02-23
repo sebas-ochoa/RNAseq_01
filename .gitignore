@@ -1,5 +1,6 @@
 .vscode/
 01_raw/
+02_work/04_ref/
 90_scratch/
 00_admin/env/
 *.fastq.gz

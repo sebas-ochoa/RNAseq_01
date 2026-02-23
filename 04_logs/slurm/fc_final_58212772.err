@@ -1,0 +1,142 @@
+Many modules are hidden in this stack. Use "module --show_hidden spider SOFTWARE" if you are not able to find the required software
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.6
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 12 BAM files                                     ||
+||                                                                            ||
+||                           HSF4_0H_1.sorted.bam                             ||
+||                           HSF4_0H_2.sorted.bam                             ||
+||                           HSF4_0H_3.sorted.bam                             ||
+||                           HSF4_2H_1.sorted.bam                             ||
+||                           HSF4_2H_2.sorted.bam                             ||
+||                           HSF4_2H_3.sorted.bam                             ||
+||                           HSF4_4H_1.sorted.bam                             ||
+||                           HSF4_4H_2.sorted.bam                             ||
+||                           HSF4_4H_3.sorted.bam                             ||
+||                           HSF4_6H_1.sorted.bam                             ||
+||                           HSF4_6H_2.sorted.bam                             ||
+||                           HSF4_6H_3.sorted.bam                             ||
+||                                                                            ||
+||             Output file : gene_counts.tsv                                  ||
+||                 Summary : gene_counts.tsv.summary                          ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : Drosophila_melanogaster.BDGP6.46.113.gtf (GTF)   ||
+||      Dir for temp files : /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1 ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file Drosophila_melanogaster.BDGP6.46.113.gtf ...          ||
+||    Features : 196625                                                       ||
+||    Meta-features : 24278                                                   ||
+||    Chromosomes/contigs : 29                                                ||
+||                                                                            ||
+|| Process BAM file HSF4_0H_1.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 159366926                                            ||
+||    Successfully assigned alignments : 131952378 (82.8%)                    ||
+||    Running time : 2.76 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_0H_2.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 128362246                                            ||
+||    Successfully assigned alignments : 108430642 (84.5%)                    ||
+||    Running time : 2.26 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_0H_3.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 125830003                                            ||
+||    Successfully assigned alignments : 101494648 (80.7%)                    ||
+||    Running time : 2.21 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_2H_1.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 133830534                                            ||
+||    Successfully assigned alignments : 110164667 (82.3%)                    ||
+||    Running time : 2.35 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_2H_2.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 126937200                                            ||
+||    Successfully assigned alignments : 104571345 (82.4%)                    ||
+||    Running time : 2.28 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_2H_3.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 119091357                                            ||
+||    Successfully assigned alignments : 101095591 (84.9%)                    ||
+||    Running time : 2.10 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_4H_1.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 112305168                                            ||
+||    Successfully assigned alignments : 93815611 (83.5%)                     ||
+||    Running time : 2.01 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_4H_2.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 107924877                                            ||
+||    Successfully assigned alignments : 91679083 (84.9%)                     ||
+||    Running time : 1.98 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_4H_3.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 109527028                                            ||
+||    Successfully assigned alignments : 92226664 (84.2%)                     ||
+||    Running time : 1.99 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_6H_1.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 106740877                                            ||
+||    Successfully assigned alignments : 90496333 (84.8%)                     ||
+||    Running time : 1.95 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_6H_2.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 112663384                                            ||
+||    Successfully assigned alignments : 94696450 (84.1%)                     ||
+||    Running time : 2.12 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_6H_3.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 116726529                                            ||
+||    Successfully assigned alignments : 96748973 (82.9%)                     ||
+||    Running time : 2.14 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/nfs/nas22/fs2202/biol_  ||
+|| bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/06  ||
+|| _counts/final/gene_counts.tsv.summary"                                     ||
+||                                                                            ||
+\\============================================================================//
+
