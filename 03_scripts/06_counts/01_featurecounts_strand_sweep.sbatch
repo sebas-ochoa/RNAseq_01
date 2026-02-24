@@ -69,7 +69,7 @@ for s in 0 1 2; do
 
   featureCounts \
     -T "$SLURM_CPUS_PER_TASK" \
-    -p -B -C \
+    -p --countReadPairs -B -C \
     -t exon -g gene_id \
     -s "$s" \
     -a "$GTF" \
@@ -89,7 +89,14 @@ for s in 0 1 2; do
   printf "%s\t%s\t%s\t%s\n" "$s" "$ASSIGNED" "$TOTAL" "$PCT" >> "$METRICS_TSV"
 done
 
-BEST_S=$(awk 'NR==1{next} {if ($4+0 > best+0) {best=$4; mode=$1}} END{print mode}' "$METRICS_TSV")
+DIRECTIONAL_LIBRARY="${DIRECTIONAL_LIBRARY:-1}"
+if [[ "$DIRECTIONAL_LIBRARY" == "1" ]]; then
+  BEST_S=$(awk 'NR==1{next} $1!=0 {if ($4+0 > best+0) {best=$4; mode=$1}} END{print mode}' "$METRICS_TSV")
+  BASIS="highest_assigned_pct_among_s1_s2_directional"
+else
+  BEST_S=$(awk 'NR==1{next} {if ($4+0 > best+0) {best=$4; mode=$1}} END{print mode}' "$METRICS_TSV")
+  BASIS="highest_assigned_pct_all_modes"
+fi
 if [[ -z "$BEST_S" ]]; then
   echo "[ERROR] Could not determine best strandedness from $METRICS_TSV" >&2
   exit 1
@@ -107,8 +114,9 @@ esac
 
 {
   echo -e "selected_s\tlabel\tbasis"
-  echo -e "${BEST_S}\t${LABEL}\thighest_assigned_pct"
+  echo -e "${BEST_S}\t${LABEL}\t${BASIS}"
 } > "${STRAND_SWEEP_DIR}/strand_decision.tsv"
 
 echo "[INFO] Strand sweep done. Best mode: -s ${BEST_S} (${LABEL})"
+echo "[INFO] DIRECTIONAL_LIBRARY=${DIRECTIONAL_LIBRARY}; decision basis: ${BASIS}"
 echo "[INFO] Metrics: ${METRICS_TSV}"

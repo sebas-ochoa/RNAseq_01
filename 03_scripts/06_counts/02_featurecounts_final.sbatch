@@ -76,7 +76,7 @@ OUT_COUNTS="${COUNTS_DIR}/gene_counts.tsv"
 echo "[INFO] Running final featureCounts with -s ${BEST_S}"
 featureCounts \
   -T "$SLURM_CPUS_PER_TASK" \
-  -p -B -C \
+  -p --countReadPairs -B -C \
   -t exon -g gene_id \
   -s "$BEST_S" \
   -a "$GTF" \
