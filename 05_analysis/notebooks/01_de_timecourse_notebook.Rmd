@@ -1,0 +1,198 @@
+---
+title: "RNA-seq DE Timecourse (Global + vs 0H)"
+output:
+  html_notebook:
+    toc: true
+    number_sections: true
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+find_project_root <- function(start_dir) {
+  cur <- normalizePath(start_dir, mustWork = FALSE)
+  repeat {
+    if (file.exists(file.path(cur, "00_admin", "metadata", "samples.tsv")) &&
+        file.exists(file.path(cur, "02_work", "06_counts", "final", "gene_counts.matrix.tsv"))) {
+      return(cur)
+    }
+    parent <- dirname(cur)
+    if (identical(parent, cur)) break
+    cur <- parent
+  }
+  normalizePath(start_dir, mustWork = FALSE)
+}
+
+project_root <- find_project_root(getwd())
+script_path <- file.path(project_root, "05_analysis", "scripts", "01_deseq2_timecourse.R")
+outdir <- file.path(project_root, "05_analysis", "de_timecourse")
+
+control_genes <- c("FBgn0000158", "FBgn0000146", "FBgn0032473", "FBgn0004372", "FBgn0260400")
+cat("project_root:", project_root, "\n")
+cat("script_path:", script_path, "\n")
+cat("outdir:", outdir, "\n")
+```
+
+## 1) Ejecutar pipeline completo (opcional)
+
+```{r run_pipeline}
+run_pipeline <- FALSE
+
+if (run_pipeline) {
+  args <- c(
+    script_path,
+    paste0("--counts=", file.path(project_root, "02_work", "06_counts", "final", "gene_counts.matrix.tsv")),
+    paste0("--samples=", file.path(project_root, "00_admin", "metadata", "samples.tsv")),
+    paste0("--outdir=", outdir)
+  )
+  out <- system2("Rscript", args = args, stdout = TRUE, stderr = TRUE)
+  cat(paste(out, collapse = "\n"))
+}
+```
+
+## 2) Cargar resultados principales
+
+```{r load_results}
+read_tsv <- function(path) {
+  if (!file.exists(path)) return(NULL)
+  read.delim(path, check.names = FALSE)
+}
+
+sample_qc <- read_tsv(file.path(outdir, "sample_qc_metrics.tsv"))
+global_lrt <- read_tsv(file.path(outdir, "global_lrt_results.tsv"))
+contrast_sig <- read_tsv(file.path(outdir, "contrast_sig_summary.tsv"))
+report_txt <- file.path(outdir, "analysis_report.txt")
+
+list(
+  sample_qc_rows = if (is.null(sample_qc)) 0 else nrow(sample_qc),
+  global_lrt_rows = if (is.null(global_lrt)) 0 else nrow(global_lrt),
+  contrast_sig_rows = if (is.null(contrast_sig)) 0 else nrow(contrast_sig),
+  report_exists = file.exists(report_txt)
+)
+```
+
+## 3) QC por muestra
+
+```{r qc_table}
+if (!is.null(sample_qc)) {
+  qc_cols <- c("sample", "timepoint", "lane", "assigned_pct", "rrna_pct_total_reads", "mito_pct_total_reads", "genes_detected")
+  qc_cols <- qc_cols[qc_cols %in% colnames(sample_qc)]
+  knitr::kable(sample_qc[, qc_cols, drop = FALSE], digits = 3)
+}
+```
+
+## 4) Global LRT y contrasts vs 0H
+
+```{r de_summary}
+if (!is.null(global_lrt)) {
+  n_global_sig <- sum(!is.na(global_lrt$padj) & global_lrt$padj < 0.05)
+  cat("Genes significativos global LRT (padj<0.05):", n_global_sig, "\n")
+}
+if (!is.null(contrast_sig)) {
+  knitr::kable(contrast_sig)
+}
+```
+
+## 5) PCA (todas las muestras y por lane)
+
+```{r pca_images, echo=FALSE, fig.width=9, fig.height=6}
+pca_imgs <- c(
+  file.path(outdir, "pca_timepoint.png"),
+  file.path(outdir, "pca_lane.png"),
+  file.path(outdir, "pca_global_de_timepoint.png"),
+  file.path(outdir, "pca_global_de_timepoint_excl_2H3_4H2_4H3.png")
+)
+pca_imgs <- pca_imgs[file.exists(pca_imgs)]
+if (length(pca_imgs) > 0) knitr::include_graphics(pca_imgs)
+```
+
+## 6) PC1 raro (all samples): loadings + GO contribución
+
+```{r rare_pc1_tables}
+rare_load <- read_tsv(file.path(outdir, "pc1_top50_loadings_contrib_global_de_all_samples_with_testis_scrna.tsv"))
+rare_go <- read_tsv(file.path(outdir, "go_quick_pc1_top50_global_de_all_samples.tsv"))
+
+if (!is.null(rare_load)) {
+  knitr::kable(head(rare_load, 20), digits = 4)
+}
+if (!is.null(rare_go)) {
+  keep <- c("ID", "Description", "p.adjust", "pc1_contribution_pct", "pc1_contribution_pct_of_top50", "n_top50_genes_in_term")
+  keep <- keep[keep %in% colnames(rare_go)]
+  knitr::kable(head(rare_go[, keep, drop = FALSE], 20), digits = 4)
+}
+```
+
+```{r rare_pc1_go_plot, echo=FALSE, fig.width=10, fig.height=6}
+p <- file.path(outdir, "go_quick_pc1_top50_global_de_all_samples.png")
+if (file.exists(p)) knitr::include_graphics(p)
+```
+
+## 7) PC1 tiempo (sin 2H_3, 4H_2, 4H_3): loadings + GO contribución
+
+```{r time_pc1_tables}
+time_load <- read_tsv(file.path(outdir, "pc1_top50_loadings_contrib_global_de_excl_2H3_4H2_4H3_with_testis_scrna.tsv"))
+time_go <- read_tsv(file.path(outdir, "go_quick_pc1_top50_global_de_excl_2H3_4H2_4H3.tsv"))
+
+if (!is.null(time_load)) {
+  knitr::kable(head(time_load, 20), digits = 4)
+}
+if (!is.null(time_go)) {
+  keep <- c("ID", "Description", "p.adjust", "pc1_contribution_pct", "pc1_contribution_pct_of_top50", "n_top50_genes_in_term")
+  keep <- keep[keep %in% colnames(time_go)]
+  knitr::kable(head(time_go[, keep, drop = FALSE], 20), digits = 4)
+}
+```
+
+```{r time_pc1_go_plot, echo=FALSE, fig.width=10, fig.height=6}
+p <- file.path(outdir, "go_quick_pc1_top50_global_de_excl_2H3_4H2_4H3.png")
+if (file.exists(p)) knitr::include_graphics(p)
+```
+
+## 8) Verificación genes control al inicio de tablas
+
+```{r controls_check}
+check_controls <- function(df) {
+  if (is.null(df) || nrow(df) == 0 || !("Geneid" %in% colnames(df))) return(NULL)
+  subset(df, Geneid %in% control_genes)
+}
+
+rare_ctrl <- check_controls(rare_load)
+time_ctrl <- check_controls(time_load)
+
+if (!is.null(rare_ctrl)) {
+  cat("Controles en tabla PC1 raro:\n")
+  knitr::kable(rare_ctrl, digits = 4)
+}
+if (!is.null(time_ctrl)) {
+  cat("Controles en tabla PC1 tiempo:\n")
+  knitr::kable(time_ctrl, digits = 4)
+}
+```
+
+## 9) scRNA long table (Pub_ID, Cluster_Name, Mean_Expression)
+
+```{r scrna_long_preview}
+rare_long <- read_tsv(file.path(outdir, "pc1_top50_loadings_contrib_global_de_all_samples_with_testis_scrna_long.tsv"))
+time_long <- read_tsv(file.path(outdir, "pc1_top50_loadings_contrib_global_de_excl_2H3_4H2_4H3_with_testis_scrna_long.tsv"))
+
+if (!is.null(rare_long)) {
+  keep <- c("Geneid", "PC1_loading", "contribution_pct_PC1", "Pub_ID", "Cluster_Name", "Mean_Expression")
+  keep <- keep[keep %in% colnames(rare_long)]
+  cat("PC1 raro (primeras filas):\n")
+  knitr::kable(head(rare_long[, keep, drop = FALSE], 25), digits = 4)
+}
+if (!is.null(time_long)) {
+  keep <- c("Geneid", "PC1_loading", "contribution_pct_PC1", "Pub_ID", "Cluster_Name", "Mean_Expression")
+  keep <- keep[keep %in% colnames(time_long)]
+  cat("\nPC1 tiempo (primeras filas):\n")
+  knitr::kable(head(time_long[, keep, drop = FALSE], 25), digits = 4)
+}
+```
+
+## 10) Resumen final del reporte
+
+```{r report_preview}
+if (file.exists(report_txt)) {
+  cat(paste(readLines(report_txt, warn = FALSE), collapse = "\n"))
+}
+```
