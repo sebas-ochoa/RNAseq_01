@@ -2,6 +2,16 @@
 
 options(stringsAsFactors = FALSE)
 
+# RNA-seq DE time-course analysis (HSF4; 0H, 2H, 4H, 6H; 3 replicates per time).
+# Core model choices:
+#   - DESeq2 design: ~ timepoint (categorical, reference 0H)
+#   - Global test: LRT full (~timepoint) vs reduced (~1)
+#   - Pairwise tests: Wald + apeglm shrinkage for 2H/4H/6H vs 0H
+#   - Visualization transform: vst(..., blind = FALSE)
+# Notes:
+#   - lane is tracked for QC/interpretation but not modeled (partially confounded with timepoint)
+#   - outputs are written under 05_analysis/de_timecourse (or --outdir)
+
 required_pkgs <- c("DESeq2", "apeglm")
 missing_pkgs <- required_pkgs[!vapply(required_pkgs, requireNamespace, logical(1), quietly = TRUE)]
 if (length(missing_pkgs) > 0) {
@@ -26,6 +36,7 @@ control_genes_default <- c(
   "FBgn0260400"  # elav
 )
 
+# ---------------------------- CLI and I/O helpers -----------------------------
 parse_args <- function(args) {
   opts <- list()
   for (arg in args) {
@@ -55,6 +66,7 @@ res_to_df <- function(res_obj) {
   df
 }
 
+# -------------------------- Reference and QC helpers ---------------------------
 find_project_root <- function(start_dir) {
   cur <- normalizePath(start_dir, mustWork = FALSE)
   repeat {
@@ -216,6 +228,7 @@ compute_sample_qc_metrics <- function(featurecounts_path, fc_summary_path, colda
   }
 
   samples <- required_samples
+  # With featureCounts -p --countReadPairs, these are fragment/template-level totals.
   assigned_reads <- sm_mat["Assigned", samples]
   total_reads <- colSums(sm_mat[, samples, drop = FALSE], na.rm = TRUE)
   assigned_pct <- ifelse(total_reads > 0, 100 * assigned_reads / total_reads, NA_real_)
@@ -278,6 +291,7 @@ compute_sample_qc_metrics <- function(featurecounts_path, fc_summary_path, colda
   invisible(out)
 }
 
+# ------------------------------ Plot utilities --------------------------------
 plot_volcano <- function(df, title, png_path, pdf_path, padj_thr = 0.05, lfc_thr = 1) {
   if (!all(c("log2FoldChange", "padj") %in% colnames(df))) {
     return(invisible(FALSE))
@@ -382,6 +396,7 @@ plot_pca <- function(vsd, coldata, prefix) {
   invisible(pca_df)
 }
 
+# ------------------------------ PCA + GO helpers -------------------------------
 compute_pc1_loadings <- function(pca_obj) {
   load <- pca_obj$rotation[, 1]
   contrib <- (load^2 / sum(load^2)) * 100
@@ -420,6 +435,9 @@ run_quick_go <- function(top_loading_df, universe_genes, out_prefix,
     return(invisible(NULL))
   }
 
+  # ORA is performed on the selected loading genes. In this workflow, callers pass top-50
+  # loadings to keep interpretation concise; full-loadings based enrichment can be added
+  # separately (e.g., ranked GSEA).
   genes <- unique(top_loading_df$Geneid[grepl("^FBgn", top_loading_df$Geneid)])
   universe <- unique(universe_genes[grepl("^FBgn", universe_genes)])
 
@@ -465,6 +483,7 @@ run_quick_go <- function(top_loading_df, universe_genes, out_prefix,
     100 * go_df$pc1_contribution_pct / total_top_contrib,
     NA_real_
   )
+  # GO terms overlap in member genes, so percentages across terms are not additive.
   go_df$n_top50_genes_in_term <- vapply(
     term_genes,
     function(gs) length(intersect(gs, names(contrib_map))),
@@ -566,6 +585,7 @@ plot_pca_global_de <- function(vsd, coldata, global_genes, prefix) {
   invisible(list(load_df = load_df, top50 = top50))
 }
 
+# PCA on global-DE genes after removing pre-defined outlier-like samples.
 plot_pca_global_de_excluded_pc1 <- function(vsd, coldata, global_genes, prefix,
                                             exclude_samples = c("HSF4_2H_3", "HSF4_4H_2", "HSF4_4H_3")) {
   genes <- unique(global_genes)
@@ -645,6 +665,7 @@ plot_pca_global_de_excluded_pc1 <- function(vsd, coldata, global_genes, prefix,
   invisible(list(load_df = load_df, top50 = top50))
 }
 
+# ----------------------- External annotation integration -----------------------
 is_gzipped_file <- function(path) {
   if (!file.exists(path)) {
     return(FALSE)
@@ -719,6 +740,7 @@ read_scrna_db_for_genes <- function(scrna_db_path, target_genes, chunk_size = 10
   con <- if (is_gzipped_file(scrna_db_path)) gzfile(scrna_db_path, "rt") else file(scrna_db_path, "rt")
   on.exit(close(con), add = TRUE)
 
+  # Skip meta lines and locate a tabular header that contains expected columns.
   header_line <- character(0)
   repeat {
     line <- readLines(con, n = 1, warn = FALSE)
@@ -749,6 +771,7 @@ read_scrna_db_for_genes <- function(scrna_db_path, target_genes, chunk_size = 10
     idx <- match(required, cols)
   }
 
+  # Stream large tables in chunks to avoid loading the whole file into memory.
   chunks <- list()
   n_chunks <- 0L
   max_idx <- max(idx)
@@ -812,6 +835,7 @@ annotate_pc_loading_with_expression <- function(load_df, output_prefix, testis_d
   }
 
   load_df <- load_df[!duplicated(load_df$Geneid), , drop = FALSE]
+  # Keep user-defined control genes pinned at the top for easy audit checks.
   load_df$control_rank <- match(load_df$Geneid, control_genes)
 
   missing_controls <- setdiff(control_genes, load_df$Geneid)
@@ -907,6 +931,7 @@ annotate_pc_loading_with_expression <- function(load_df, output_prefix, testis_d
   invisible(load_df)
 }
 
+# ----------------------------- DESeq2 core logic -------------------------------
 plot_heatmap <- function(vsd, genes, coldata, title, png_path, pdf_path) {
   genes <- unique(genes)
   genes <- genes[genes %in% rownames(vsd)]
@@ -959,6 +984,7 @@ run_analysis <- function(count_mat, coldata, outdir, apply_filter = TRUE, padj_t
                          scrna_db_path = NA_character_, control_genes = character(0)) {
   dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
 
+  # Main inferential model: categorical timepoint with 0H as reference.
   dds <- DESeqDataSetFromMatrix(
     countData = count_mat,
     colData = coldata,
@@ -967,6 +993,7 @@ run_analysis <- function(count_mat, coldata, outdir, apply_filter = TRUE, padj_t
 
   n_before <- nrow(dds)
   if (apply_filter) {
+    # Lightweight pre-filter to reduce unstable low-count genes before model fitting.
     keep <- rowSums(counts(dds)) >= 10
     dds <- dds[keep, ]
   }
@@ -976,13 +1003,16 @@ run_analysis <- function(count_mat, coldata, outdir, apply_filter = TRUE, padj_t
     stop("Too few genes left after filtering; cannot run DE.", call. = FALSE)
   }
 
+  # Omnibus/global test: does a gene vary across timepoint levels?
   lrt_dds <- DESeq(dds, test = "LRT", reduced = ~1, quiet = TRUE)
   global_res <- results(lrt_dds)
   global_df <- res_to_df(global_res)
   write_tsv(global_df, file.path(outdir, "global_lrt_results.tsv"))
 
+  # Coefficient-wise inference for specific contrasts (vs 0H).
   wald_dds <- DESeq(dds, test = "Wald", quiet = TRUE)
 
+  # blind=FALSE is intentional for downstream analyses where many genes can vary by design.
   vsd <- vst(wald_dds, blind = FALSE)
   plot_pca(vsd, coldata = as.data.frame(colData(wald_dds)), prefix = outdir)
 
@@ -998,6 +1028,8 @@ run_analysis <- function(count_mat, coldata, outdir, apply_filter = TRUE, padj_t
     prefix = outdir
   )
 
+  # Exploratory view only: remove selected samples to inspect alternate PC1 structure.
+  # DE testing itself still uses all samples.
   pca_time <- plot_pca_global_de_excluded_pc1(
     vsd,
     coldata = as.data.frame(colData(wald_dds)),
@@ -1058,12 +1090,14 @@ run_analysis <- function(count_mat, coldata, outdir, apply_filter = TRUE, padj_t
       stop(sprintf("Expected coefficient not found: %s\nAvailable: %s", coef_name, paste(res_names, collapse = ", ")), call. = FALSE)
     }
 
+    # apeglm shrinkage is used for more stable effect-size ranking/visualization.
     shr <- lfcShrink(wald_dds, coef = coef_name, type = "apeglm")
     cdf <- res_to_df(shr)
 
     contrast_name <- paste0(tp, "_vs_0H")
     write_tsv(cdf, file.path(outdir, paste0("contrast_", contrast_name, ".tsv")))
 
+    # Practical DE set: FDR threshold + minimum effect-size threshold on shrunken LFC.
     sig <- subset(cdf, !is.na(padj) & padj < padj_thr & !is.na(log2FoldChange) & abs(log2FoldChange) >= lfc_thr)
     write_tsv(sig, file.path(outdir, paste0("sig_contrast_", contrast_name, ".tsv")))
 
@@ -1116,6 +1150,7 @@ run_analysis <- function(count_mat, coldata, outdir, apply_filter = TRUE, padj_t
   )
 }
 
+# ----------------------------- Main script entry -------------------------------
 project_root_default <- find_project_root(getwd())
 
 opts <- parse_args(commandArgs(trailingOnly = TRUE))
@@ -1190,6 +1225,7 @@ if (any(is.na(sample_df$timepoint))) {
   stop("Detected samples with timepoints outside expected levels: 0H,2H,4H,6H", call. = FALSE)
 }
 sample_df$lane <- factor(sample_df$lane, levels = c("L7", "L8", "NA"))
+# lane is kept for QC plots/reporting only (not in design) because of confounding with timepoint.
 
 rownames(sample_df) <- sample_df$sample
 sample_df <- sample_df[colnames(count_mat), , drop = FALSE]
@@ -1203,6 +1239,15 @@ if (ncol(count_mat) != 12) {
 }
 
 time_counts <- table(sample_df$timepoint)
+if (any(time_counts != 3)) {
+  warning(
+    sprintf(
+      "Expected 3 replicates per timepoint; observed: %s",
+      paste(names(time_counts), as.integer(time_counts), sep = "=", collapse = ", ")
+    ),
+    call. = FALSE
+  )
+}
 write_tsv(
   data.frame(timepoint = names(time_counts), n_samples = as.integer(time_counts), stringsAsFactors = FALSE),
   file.path(outdir, "sample_distribution.tsv")
@@ -1302,6 +1347,7 @@ writeLines(c(
   "Confounding warning:",
   "- lane and timepoint are partially confounded in this dataset (0H/2H in L8; 4H/6H in L7).",
   "- Cross-lane contrasts (e.g., 4H vs 0H, 6H vs 0H) may reflect both biology and lane effects.",
+  "- PCA excluding 2H_3/4H_2/4H_3 is exploratory only; DE inference uses all samples.",
   "",
   "Main (filtered) summary:",
   sprintf("- genes before filter: %d", main_summary$n_before),
@@ -1323,6 +1369,7 @@ writeLines(c(
   "- pca_global_de_timepoint_excl_2H3_4H2_4H3.(png/pdf)",
   "- pc1_all_loadings_contrib_global_de_all_samples.tsv",
   "- pc1_top50_loadings_contrib_global_de_all_samples.tsv",
+  "- GO quick uses top-50 PC1 loading genes (ORA), not a ranked all-genes GSEA.",
   "- go_quick_pc1_top50_global_de_all_samples.(tsv/png/pdf or status.txt)",
   "- pc1_top50_loadings_contrib_global_de_all_samples_with_testis_scrna.tsv",
   "- pc1_top50_loadings_contrib_global_de_all_samples_with_testis_scrna_long.tsv",

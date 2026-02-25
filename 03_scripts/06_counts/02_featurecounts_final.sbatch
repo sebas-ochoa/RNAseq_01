@@ -24,7 +24,7 @@ chmod -R u+rwX,g+rwX "$SLURM_LOG_DIR" "$COUNTS_DIR" 2>/dev/null || true
 mapfile -t BAMS < <(find "$ALIGN_DIR" -maxdepth 1 -type f -name '*.sorted.bam' | sort)
 
 OUT_COUNTS="${COUNTS_DIR}/gene_counts.tsv"
-STRAND_MODE="${FEATURECOUNTS_STRAND:-0}"  # Set to 0 from RSeQC/infer_experiment results.
+STRAND_MODE=0
 
 echo "[INFO] Running final featureCounts with -s ${STRAND_MODE}"
 featureCounts \

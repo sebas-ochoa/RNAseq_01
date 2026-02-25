@@ -12,6 +12,7 @@ mkdir -p "$SLURM_LOG_DIR" "$TMP_ROOT" "$ALIGN_DIR" "$ALIGN_QC_DIR" "$COUNTS_DIR"
 chmod -R u+rwX,g+rwX "$SLURM_LOG_DIR" "$TMP_ROOT" "$ALIGN_DIR" "$ALIGN_QC_DIR" "$COUNTS_DIR" 2>/dev/null || true
 
 N_SAMPLES=$(awk 'NR>1 && NF>=1 {n++} END{print n+0}' "$SAMPLES_TSV")
+[[ "$N_SAMPLES" -gt 0 ]] || { echo "[ERROR] No samples found in $SAMPLES_TSV"; exit 1; }
 
 J_ALIGN=$(sbatch --parsable --array="1-${N_SAMPLES}" "${PROJECT_ROOT}/03_scripts/05_align/01_star_align_trim_array.sbatch")
 J_ALIGN_QC=$(sbatch --parsable --dependency="afterok:${J_ALIGN}" "${PROJECT_ROOT}/03_scripts/05_align/02_align_qc_multiqc.sbatch")
