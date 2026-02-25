@@ -9,41 +9,13 @@
 set -euo pipefail
 umask 007
 
-on_error() {
-  local line="$1"
-  local code="$2"
-  echo "[ERROR] Job ${SLURM_JOB_ID:-NA} failed at line ${line}: ${BASH_COMMAND}" >&2
-  exit "$code"
-}
-trap 'on_error $LINENO $?' ERR
-
-ensure_writable_dir() {
-  local dir="$1"
-  mkdir -p "$dir"
-  chmod 2770 "$dir" 2>/dev/null || true
-
-  if [[ ! -d "$dir" || ! -w "$dir" ]]; then
-    echo "[ERROR] Directory missing or not writable: $dir" >&2
-    ls -ld "$dir" >&2 || true
-    exit 1
-  fi
-
-  local probe="${dir}/.write_test_${SLURM_JOB_ID:-manual}"
-  if ! touch "$probe" 2>/dev/null; then
-    echo "[ERROR] Could not create file in: $dir" >&2
-    ls -ld "$dir" >&2 || true
-    exit 1
-  fi
-  rm -f "$probe"
-}
-
-PROJECT_ROOT="${SLURM_SUBMIT_DIR:?SLURM_SUBMIT_DIR is empty}"
+PROJECT_ROOT="${SLURM_SUBMIT_DIR:-$(pwd)}"
 cd "$PROJECT_ROOT"
 source "${PROJECT_ROOT}/00_admin/config/pipeline.env"
 
-RSEQC_MODULE="${RSEQC_MODULE:-rseqc}"
 RSEQC_DIR="${RSEQC_DIR:-${PROJECT_ROOT}/02_work/05_align/rseqc}"
 RSEQC_BED="${RSEQC_BED:-${REFERENCE_DIR}/rseqc_reference.bed}"
+RSEQC_VENV="${RSEQC_VENV:-${PROJECT_ROOT}/00_admin/env/rseqc_venv}"
 
 module purge
 module load "$STACK_MODULE"
@@ -51,48 +23,22 @@ module load "$GCC_MODULE"
 module load "$PYTHON_MODULE"
 module load "$SAMTOOLS_MODULE"
 
-if ! module load "$RSEQC_MODULE" 2>/dev/null; then
-  echo "[WARN] Could not load module '$RSEQC_MODULE'. Will try infer_experiment.py from PATH."
-fi
+mkdir -p "$SLURM_LOG_DIR" "$RSEQC_DIR" "$REFERENCE_DIR"
+chmod -R u+rwX,g+rwX "$SLURM_LOG_DIR" "$RSEQC_DIR" "$REFERENCE_DIR" 2>/dev/null || true
 
-ensure_writable_dir "$SLURM_LOG_DIR"
-ensure_writable_dir "$RSEQC_DIR"
-ensure_writable_dir "$REFERENCE_DIR"
-
-if ! command -v infer_experiment.py >/dev/null 2>&1; then
-  echo "[ERROR] infer_experiment.py not found in PATH." >&2
-  echo "[ERROR] Load an RSeQC module or set PATH to include RSeQC binaries." >&2
-  exit 1
-fi
-
-if [[ ! -s "$GTF" ]]; then
-  echo "[ERROR] GTF not found: $GTF" >&2
-  exit 1
+if [[ -f "${RSEQC_VENV}/bin/activate" ]]; then
+  source "${RSEQC_VENV}/bin/activate"
 fi
 
 if [[ ! -s "$RSEQC_BED" ]]; then
-  if ! command -v gtf2bed >/dev/null 2>&1; then
-    echo "[ERROR] RSeQC BED missing: $RSEQC_BED" >&2
-    echo "[ERROR] Could not auto-generate because gtf2bed is not available." >&2
-    echo "[ERROR] Provide a BED12 gene model via RSEQC_BED and rerun." >&2
-    exit 1
-  fi
-
-  echo "[INFO] Generating RSeQC BED from GTF: $RSEQC_BED"
-  TMP_BED="${RSEQC_BED}.tmp.${SLURM_JOB_ID:-manual}"
   if [[ "$GTF" == *.gz ]]; then
-    zcat "$GTF" | gtf2bed > "$TMP_BED"
+    zcat "$GTF" | gtf2bed > "$RSEQC_BED"
   else
-    gtf2bed < "$GTF" > "$TMP_BED"
+    gtf2bed < "$GTF" > "$RSEQC_BED"
   fi
-  mv -f "$TMP_BED" "$RSEQC_BED"
 fi
 
 mapfile -t BAMS < <(find "$ALIGN_DIR" -maxdepth 1 -type f -name '*.sorted.bam' | sort)
-if [[ "${#BAMS[@]}" -eq 0 ]]; then
-  echo "[ERROR] No BAM files found in $ALIGN_DIR" >&2
-  exit 1
-fi
 
 SUMMARY_TSV="${RSEQC_DIR}/infer_experiment_summary.tsv"
 {
@@ -101,24 +47,15 @@ SUMMARY_TSV="${RSEQC_DIR}/infer_experiment_summary.tsv"
 
 for BAM in "${BAMS[@]}"; do
   SAMPLE="$(basename "$BAM" .sorted.bam)"
-  BAI="${BAM}.bai"
   OUT_TXT="${RSEQC_DIR}/${SAMPLE}.infer_experiment.txt"
 
-  if [[ ! -s "$BAI" ]]; then
-    samtools index -@ "$SLURM_CPUS_PER_TASK" "$BAM"
-  fi
+  [[ -s "${BAM}.bai" ]] || samtools index -@ "$SLURM_CPUS_PER_TASK" "$BAM"
 
   infer_experiment.py -r "$RSEQC_BED" -i "$BAM" > "$OUT_TXT" 2>&1
 
   FAILED="$(awk -F': ' '/Fraction of reads failed to determine/ {gsub(/ /, "", $2); print $2; exit}' "$OUT_TXT")"
   FR="$(awk -F': ' '/1\+\+,1--,2\+-,2-\+/ {gsub(/ /, "", $2); gsub(/"/, "", $2); print $2; exit}' "$OUT_TXT")"
   RF="$(awk -F': ' '/1\+-,1-\+,2\+\+,2--/ {gsub(/ /, "", $2); gsub(/"/, "", $2); print $2; exit}' "$OUT_TXT")"
-
-  if [[ -z "$FAILED" || -z "$FR" || -z "$RF" ]]; then
-    echo "[WARN] Could not parse infer_experiment output for $SAMPLE" >&2
-    printf "%s\tNA\tNA\tNA\tparse_failed\tNA\n" "$SAMPLE" >> "$SUMMARY_TSV"
-    continue
-  fi
 
   read -r LAYOUT SUGGESTED_S <<<"$(awk -v f="$FAILED" -v fr="$FR" -v rf="$RF" 'BEGIN {
     if (f+0 >= 0.50) {
@@ -138,7 +75,7 @@ done
 
 RECO_TSV="${RSEQC_DIR}/infer_experiment_recommendation.tsv"
 read -r MEAN_FAILED MEAN_FR MEAN_RF N_OK <<<"$(awk 'BEGIN{n=0;f=0;fr=0;rf=0}
-  NR>1 && $2!="NA" {n++; f+=$2; fr+=$3; rf+=$4}
+  NR>1 {n++; f+=$2; fr+=$3; rf+=$4}
   END {
     if (n==0) {
       printf "NA NA NA 0"
