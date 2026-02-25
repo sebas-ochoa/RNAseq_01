@@ -983,7 +983,7 @@ run_analysis <- function(count_mat, coldata, outdir, apply_filter = TRUE, padj_t
 
   wald_dds <- DESeq(dds, test = "Wald", quiet = TRUE)
 
-  vsd <- vst(wald_dds, blind = TRUE)
+  vsd <- vst(wald_dds, blind = FALSE)
   plot_pca(vsd, coldata = as.data.frame(colData(wald_dds)), prefix = outdir)
 
   global_sig <- subset(global_df, !is.na(padj) & padj < padj_thr)

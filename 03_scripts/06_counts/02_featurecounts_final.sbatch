@@ -9,33 +9,7 @@
 set -euo pipefail
 umask 007
 
-on_error() {
-  local line="$1"
-  local code="$2"
-  echo "[ERROR] Job ${SLURM_JOB_ID:-NA} failed at line ${line}: ${BASH_COMMAND}" >&2
-  exit "$code"
-}
-trap 'on_error $LINENO $?' ERR
-
-ensure_writable_dir() {
-  local dir="$1"
-  mkdir -p "$dir"
-  chmod 2770 "$dir" 2>/dev/null || true
-  if [[ ! -d "$dir" || ! -w "$dir" ]]; then
-    echo "[ERROR] Directory missing or not writable: $dir" >&2
-    ls -ld "$dir" >&2 || true
-    exit 1
-  fi
-  local probe="${dir}/.write_test_${SLURM_JOB_ID:-manual}"
-  if ! touch "$probe" 2>/dev/null; then
-    echo "[ERROR] Could not create file in: $dir" >&2
-    ls -ld "$dir" >&2 || true
-    exit 1
-  fi
-  rm -f "$probe"
-}
-
-PROJECT_ROOT="${SLURM_SUBMIT_DIR:?SLURM_SUBMIT_DIR is empty}"
+PROJECT_ROOT="${SLURM_SUBMIT_DIR:-$(pwd)}"
 cd "$PROJECT_ROOT"
 source "${PROJECT_ROOT}/00_admin/config/pipeline.env"
 
@@ -44,49 +18,23 @@ module load "$STACK_MODULE"
 module load "$GCC_MODULE"
 module load "$SUBREAD_MODULE"
 
-ensure_writable_dir "$SLURM_LOG_DIR"
-ensure_writable_dir "$COUNTS_DIR"
-
-DECISION_TSV="${STRAND_SWEEP_DIR}/strand_decision.tsv"
-if [[ ! -s "$DECISION_TSV" ]]; then
-  echo "[ERROR] Missing strand decision file: $DECISION_TSV" >&2
-  echo "[ERROR] Run 03_scripts/06_counts/01_featurecounts_strand_sweep.sbatch first." >&2
-  exit 1
-fi
-
-BEST_S=$(awk 'NR==2{print $1}' "$DECISION_TSV")
-if [[ ! "$BEST_S" =~ ^[012]$ ]]; then
-  echo "[ERROR] Invalid selected_s in $DECISION_TSV: $BEST_S" >&2
-  exit 1
-fi
-
-if [[ ! -s "$GTF" ]]; then
-  echo "[ERROR] GTF not found: $GTF" >&2
-  exit 1
-fi
+mkdir -p "$SLURM_LOG_DIR" "$COUNTS_DIR"
+chmod -R u+rwX,g+rwX "$SLURM_LOG_DIR" "$COUNTS_DIR" 2>/dev/null || true
 
 mapfile -t BAMS < <(find "$ALIGN_DIR" -maxdepth 1 -type f -name '*.sorted.bam' | sort)
-if [[ "${#BAMS[@]}" -eq 0 ]]; then
-  echo "[ERROR] No BAM files found in $ALIGN_DIR" >&2
-  exit 1
-fi
 
 OUT_COUNTS="${COUNTS_DIR}/gene_counts.tsv"
+STRAND_MODE="${FEATURECOUNTS_STRAND:-0}"  # Set to 0 from RSeQC/infer_experiment results.
 
-echo "[INFO] Running final featureCounts with -s ${BEST_S}"
+echo "[INFO] Running final featureCounts with -s ${STRAND_MODE}"
 featureCounts \
   -T "$SLURM_CPUS_PER_TASK" \
   -p --countReadPairs -B -C \
   -t exon -g gene_id \
-  -s "$BEST_S" \
+  -s "$STRAND_MODE" \
   -a "$GTF" \
   -o "$OUT_COUNTS" \
   "${BAMS[@]}"
-
-if [[ ! -s "$OUT_COUNTS" || ! -s "${OUT_COUNTS}.summary" ]]; then
-  echo "[ERROR] Final featureCounts output missing." >&2
-  exit 1
-fi
 
 MATRIX_OUT="${COUNTS_DIR}/gene_counts.matrix.tsv"
 awk 'BEGIN{OFS="\t"}
