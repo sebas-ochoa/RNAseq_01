@@ -1,0 +1,13 @@
+sample	fraction_failed	fraction_1pp_1mm_2pm_2mp	fraction_1pm_1mp_2pp_2mm	inferred_layout	suggested_featurecounts_s
+HSF4_0H_1	0.197200	0.400000	0.402800	ambiguous_s1_s2_close	0
+HSF4_0H_2	0.157400	0.422200	0.420400	ambiguous_s1_s2_close	0
+HSF4_0H_3	0.147200	0.427900	0.424800	ambiguous_s1_s2_close	0
+HSF4_2H_1	0.185800	0.404400	0.409700	ambiguous_s1_s2_close	0
+HSF4_2H_2	0.165900	0.415800	0.418300	ambiguous_s1_s2_close	0
+HSF4_2H_3	0.162300	0.416300	0.421400	ambiguous_s1_s2_close	0
+HSF4_4H_1	0.177600	0.408200	0.414200	ambiguous_s1_s2_close	0
+HSF4_4H_2	0.173700	0.411400	0.414900	ambiguous_s1_s2_close	0
+HSF4_4H_3	0.165000	0.416200	0.418700	ambiguous_s1_s2_close	0
+HSF4_6H_1	0.158700	0.414600	0.426600	ambiguous_s1_s2_close	0
+HSF4_6H_2	0.177800	0.409800	0.412400	ambiguous_s1_s2_close	0
+HSF4_6H_3	0.183200	0.405400	0.411300	ambiguous_s1_s2_close	0

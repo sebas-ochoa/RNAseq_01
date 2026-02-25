@@ -1,0 +1,8 @@
+metric	value
+n_samples_evaluated	12
+mean_fraction_failed	0.170983
+mean_fraction_1pp_1mm_2pm_2mp	0.412683
+mean_fraction_1pm_1mp_2pp_2mm	0.416292
+final_inferred_layout	ambiguous_s1_s2_close
+recommended_featurecounts_s	0
+decision_rule	threshold_delta_0.10_and_failed_lt_0.50
