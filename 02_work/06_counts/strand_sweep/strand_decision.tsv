@@ -1,2 +1,2 @@
 selected_s	label	basis
-0	unstranded	highest_assigned_pct
+2	stranded_reverse	highest_assigned_pct_among_s1_s2_directional
