@@ -30,11 +30,91 @@ if [[ -f "${RSEQC_VENV}/bin/activate" ]]; then
   source "${RSEQC_VENV}/bin/activate"
 fi
 
+GTF2BED_BIN="$(command -v gtf2bed.py || command -v gtf2bed || true)"
+INFER_BIN="$(command -v infer_experiment.py || command -v infer_experiment || true)"
+
+if [[ -z "$INFER_BIN" ]]; then
+  echo "[ERROR] infer_experiment(.py) not found in PATH" >&2
+  exit 1
+fi
+
 if [[ ! -s "$RSEQC_BED" ]]; then
-  if [[ "$GTF" == *.gz ]]; then
-    zcat "$GTF" | gtf2bed > "$RSEQC_BED"
+  if [[ -n "$GTF2BED_BIN" ]]; then
+    if [[ "$GTF" == *.gz ]]; then
+      zcat "$GTF" | "$GTF2BED_BIN" > "$RSEQC_BED"
+    else
+      "$GTF2BED_BIN" < "$GTF" > "$RSEQC_BED"
+    fi
   else
-    gtf2bed < "$GTF" > "$RSEQC_BED"
+    python - "$GTF" "$RSEQC_BED" <<'PY'
+import gzip
+import re
+import sys
+
+gtf_path = sys.argv[1]
+bed_path = sys.argv[2]
+attr_re = re.compile(r'([A-Za-z_][A-Za-z0-9_]*) "([^"]+)"')
+
+def open_gtf(path):
+    if path.endswith(".gz"):
+        return gzip.open(path, "rt", encoding="utf-8", errors="replace")
+    return open(path, "rt", encoding="utf-8", errors="replace")
+
+tx = {}
+with open_gtf(gtf_path) as fh:
+    for line in fh:
+        if not line or line.startswith("#"):
+            continue
+        parts = line.rstrip("\n").split("\t")
+        if len(parts) < 9 or parts[2] != "exon":
+            continue
+        chrom, _, _, start, end, _, strand, _, attrs = parts
+        attrs_d = {k: v for k, v in attr_re.findall(attrs)}
+        tid = attrs_d.get("transcript_id")
+        gid = attrs_d.get("gene_id", "NA")
+        if not tid:
+            continue
+        s = int(start)
+        e = int(end)
+        rec = tx.get(tid)
+        if rec is None:
+            rec = {"chrom": chrom, "strand": strand, "gid": gid, "exons": []}
+            tx[tid] = rec
+        rec["exons"].append((s, e))
+
+with open(bed_path, "wt", encoding="utf-8") as out:
+    for tid, rec in sorted(
+        tx.items(),
+        key=lambda kv: (kv[1]["chrom"], min(x[0] for x in kv[1]["exons"]), kv[0]),
+    ):
+        exons = sorted(rec["exons"])
+        tx_start = min(s for s, _ in exons)
+        tx_end = max(e for _, e in exons)
+        bed_start = tx_start - 1
+        bed_end = tx_end
+        block_sizes = [str(e - s + 1) for s, e in exons]
+        block_starts = [str((s - 1) - bed_start) for s, _ in exons]
+        name = f"{tid}|{rec['gid']}"
+        out.write(
+            "\t".join(
+                [
+                    rec["chrom"],
+                    str(bed_start),
+                    str(bed_end),
+                    name,
+                    "0",
+                    rec["strand"],
+                    str(bed_start),
+                    str(bed_end),
+                    "0",
+                    str(len(exons)),
+                    ",".join(block_sizes) + ",",
+                    ",".join(block_starts) + ",",
+                ]
+            )
+            + "\n"
+        )
+PY
   fi
 fi
 
@@ -51,7 +131,7 @@ for BAM in "${BAMS[@]}"; do
 
   [[ -s "${BAM}.bai" ]] || samtools index -@ "$SLURM_CPUS_PER_TASK" "$BAM"
 
-  infer_experiment.py -r "$RSEQC_BED" -i "$BAM" > "$OUT_TXT" 2>&1
+  "$INFER_BIN" -r "$RSEQC_BED" -i "$BAM" > "$OUT_TXT" 2>&1
 
   FAILED="$(awk -F': ' '/Fraction of reads failed to determine/ {gsub(/ /, "", $2); print $2; exit}' "$OUT_TXT")"
   FR="$(awk -F': ' '/1\+\+,1--,2\+-,2-\+/ {gsub(/ /, "", $2); gsub(/"/, "", $2); print $2; exit}' "$OUT_TXT")"
