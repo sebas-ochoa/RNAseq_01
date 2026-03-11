@@ -14,12 +14,15 @@ PROJECT_ROOT="${SLURM_SUBMIT_DIR:-$(pwd)}"
 cd "$PROJECT_ROOT"
 source "${PROJECT_ROOT}/00_admin/config/pipeline.env"
 
+QUALIMAP_HOME="${QUALIMAP_HOME:-${PROJECT_ROOT}/00_admin/env/qualimap}"
 QUALIMAP_DIR="${QUALIMAP_DIR:-${PROJECT_ROOT}/02_work/05_align/qualimap}"
 QUALIMAP_MEM="${QUALIMAP_MEM:-10G}"
 
+[[ -x "${QUALIMAP_HOME}/qualimap" ]] || { echo "[ERROR] Qualimap not found at ${QUALIMAP_HOME}. Run 03_scripts/00_helpers/00_install_qualimap.sh first." >&2; exit 1; }
+
 module purge
 module load "$STACK_MODULE"
-module load "$QUALIMAP_MODULE"
+module load "$JAVA_MODULE"
 
 mkdir -p "$SLURM_LOG_DIR" "$QUALIMAP_DIR"
 chmod -R u+rwX,g+rwX "$SLURM_LOG_DIR" "$QUALIMAP_DIR" 2>/dev/null || true
@@ -37,7 +40,7 @@ OUT_DIR="${QUALIMAP_DIR}/${SAMPLE}"
 
 mkdir -p "$OUT_DIR"
 
-qualimap bamqc \
+"${QUALIMAP_HOME}/qualimap" bamqc \
   -bam "$BAM" \
   -nt "$SLURM_CPUS_PER_TASK" \
   -outdir "$OUT_DIR" \
