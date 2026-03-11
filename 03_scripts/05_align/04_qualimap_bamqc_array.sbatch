@@ -22,7 +22,8 @@ QUALIMAP_MEM="${QUALIMAP_MEM:-10G}"
 
 module purge
 module load "$STACK_MODULE"
-module load "$JAVA_MODULE"
+
+export PATH="${JAVA_HOME}/bin:${PATH}"
 
 mkdir -p "$SLURM_LOG_DIR" "$QUALIMAP_DIR"
 chmod -R u+rwX,g+rwX "$SLURM_LOG_DIR" "$QUALIMAP_DIR" 2>/dev/null || true
