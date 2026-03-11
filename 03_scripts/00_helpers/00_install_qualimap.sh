@@ -38,10 +38,13 @@ cp -r "${INNER_DIR}/." "$QUALIMAP_HOME/"
 
 chmod +x "${QUALIMAP_HOME}/qualimap"
 
+# MaxPermSize was removed in Java 9+; patch the launcher script to avoid JVM crash
+sed -i 's/-XX:MaxPermSize=[0-9]*m//g' "${QUALIMAP_HOME}/qualimap"
+
 # Cleanup
 rm -rf "$TMP_ZIP" "$EXTRACT_DIR"
 
 echo "[INFO] Testing installation..."
+export PATH="${JAVA_HOME}/bin:${PATH}"
 "${QUALIMAP_HOME}/qualimap" --version 2>&1 || true
 echo "[INFO] Qualimap installed at: ${QUALIMAP_HOME}"
-echo "[INFO] Next step: verify JAVA_MODULE in pipeline.env (run: module avail java)"
