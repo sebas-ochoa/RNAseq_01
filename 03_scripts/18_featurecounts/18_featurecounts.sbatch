@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#SBATCH --job-name=16_featurecounts
+#SBATCH --job-name=18_featurecounts
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=4G
 #SBATCH --time=02:00:00
@@ -18,12 +18,12 @@ module load "$STACK_MODULE"
 module load "$GCC_MODULE"
 module load "$SUBREAD_MODULE"
 
-mkdir -p "$COUNTS16_DIR" "04_logs/slurm"
-chmod -R u+rwX,g+rwX "$COUNTS16_DIR" 2>/dev/null || true
+mkdir -p "$COUNTS18_DIR" "04_logs/slurm"
+chmod -R u+rwX,g+rwX "$COUNTS18_DIR" 2>/dev/null || true
 
-mapfile -t BAMS < <(find "$ALIGN15_DIR" -maxdepth 1 -name '*.sorted.bam' | sort)
+mapfile -t BAMS < <(find "$ALIGN17_DIR" -maxdepth 1 -name '*.sorted.bam' | sort)
 
-OUT_COUNTS="${COUNTS16_DIR}/gene_counts.tsv"
+OUT_COUNTS="${COUNTS18_DIR}/gene_counts.tsv"
 
 featureCounts \
   -T "$SLURM_CPUS_PER_TASK" \
@@ -34,7 +34,7 @@ featureCounts \
   -o "$OUT_COUNTS" \
   "${BAMS[@]}"
 
-MATRIX_OUT="${COUNTS16_DIR}/gene_counts.matrix.tsv"
+MATRIX_OUT="${COUNTS18_DIR}/gene_counts.matrix.tsv"
 awk 'BEGIN{OFS="\t"}
   NR==2 {
     printf "Geneid"

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#SBATCH --job-name=15_star
+#SBATCH --job-name=17_star
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=4G
 #SBATCH --time=08:00:00
@@ -20,16 +20,16 @@ module load "$GCC_MODULE"
 module load "$STAR_MODULE"
 module load "$SAMTOOLS_MODULE"
 
-mkdir -p "$ALIGN15_DIR" "$TMP_ROOT" "04_logs/slurm"
-chmod -R u+rwX,g+rwX "$ALIGN15_DIR" "$TMP_ROOT" 2>/dev/null || true
+mkdir -p "$ALIGN17_DIR" "$TMP_ROOT" "04_logs/slurm"
+chmod -R u+rwX,g+rwX "$ALIGN17_DIR" "$TMP_ROOT" 2>/dev/null || true
 
 LINE=$(sed -n "$((SLURM_ARRAY_TASK_ID+1))p" "$SAMPLES_TSV")
 [[ -n "$LINE" ]] || exit 0
 SAMPLE=$(echo "$LINE" | cut -f1)
 
-R1="${TRIM14_DIR}/${SAMPLE}_1.trim.fq.gz"
-R2="${TRIM14_DIR}/${SAMPLE}_2.trim.fq.gz"
-FINAL_BAM="${ALIGN15_DIR}/${SAMPLE}.sorted.bam"
+R1="${SUB15_DIR}/${SAMPLE}_1.sub.fq.gz"
+R2="${SUB15_DIR}/${SAMPLE}_2.sub.fq.gz"
+FINAL_BAM="${ALIGN17_DIR}/${SAMPLE}.sorted.bam"
 JOB_TMP="${TMP_ROOT}/${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
 mkdir -p "$JOB_TMP"
 
@@ -40,13 +40,13 @@ STAR \
   --genomeDir "$STAR_INDEX_DIR" \
   --readFilesIn "$R1" "$R2" \
   --readFilesCommand zcat \
-  --outFileNamePrefix "${ALIGN15_DIR}/${SAMPLE}." \
+  --outFileNamePrefix "${ALIGN17_DIR}/${SAMPLE}." \
   --outSAMtype BAM SortedByCoordinate \
   --outSAMattributes NH HI AS nM XS \
   --outTmpDir "${JOB_TMP}/star_${SAMPLE}" \
   --limitBAMsortRAM "$STAR_ALIGN_SORT_RAM"
 
-mv -f "${ALIGN15_DIR}/${SAMPLE}.Aligned.sortedByCoord.out.bam" "$FINAL_BAM"
+mv -f "${ALIGN17_DIR}/${SAMPLE}.Aligned.sortedByCoord.out.bam" "$FINAL_BAM"
 samtools index -@ "$SLURM_CPUS_PER_TASK" "$FINAL_BAM"
 rm -rf "$JOB_TMP"
 

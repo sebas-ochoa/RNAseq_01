@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#SBATCH --job-name=17_qualimap
+#SBATCH --job-name=19_qualimap
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=3G
 #SBATCH --time=01:00:00
@@ -18,15 +18,15 @@ module purge
 module load "$STACK_MODULE"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 
-mkdir -p "$QUALIMAP17_DIR" "04_logs/slurm"
-chmod -R u+rwX,g+rwX "$QUALIMAP17_DIR" 2>/dev/null || true
+mkdir -p "$QUALIMAP19_DIR" "04_logs/slurm"
+chmod -R u+rwX,g+rwX "$QUALIMAP19_DIR" 2>/dev/null || true
 
 LINE=$(sed -n "$((SLURM_ARRAY_TASK_ID+1))p" "$SAMPLES_TSV")
 [[ -n "$LINE" ]] || exit 0
 SAMPLE=$(echo "$LINE" | cut -f1)
 
-BAM="${ALIGN15_DIR}/${SAMPLE}.sorted.bam"
-OUT_DIR="${QUALIMAP17_DIR}/${SAMPLE}"
+BAM="${ALIGN17_DIR}/${SAMPLE}.sorted.bam"
+OUT_DIR="${QUALIMAP19_DIR}/${SAMPLE}"
 mkdir -p "$OUT_DIR"
 
 echo "[INFO] Sample: $SAMPLE"

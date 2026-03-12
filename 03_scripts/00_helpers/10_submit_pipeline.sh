@@ -20,18 +20,22 @@ J_QC=$(sbatch  --parsable --array="1-${N}" "${S}/11_qc_raw/11_fastqc_array.sbatc
 J_RNA=$(sbatch --parsable --array="1-${N}" "${S}/12_sortmerna/12_sortmerna_array.sbatch")
 J_FQS=$(sbatch --parsable --array="1-${N}" --dependency="afterok:${J_RNA}" "${S}/13_fastq_screen/13_fastq_screen_array.sbatch")
 J_TRM=$(sbatch --parsable --array="1-${N}" --dependency="afterok:${J_RNA}" "${S}/14_trim/14_fastp_array.sbatch")
-J_ALN=$(sbatch --parsable --array="1-${N}" --dependency="afterok:${J_TRM}" "${S}/15_star/15_star_align_array.sbatch")
-J_CNT=$(sbatch --parsable                  --dependency="afterok:${J_ALN}" "${S}/16_featurecounts/16_featurecounts.sbatch")
-J_QMP=$(sbatch --parsable --array="1-${N}" --dependency="afterok:${J_ALN}" "${S}/17_qualimap/17_qualimap_array.sbatch")
+J_SUB=$(sbatch --parsable --array="1-${N}" --dependency="afterok:${J_TRM}" "${S}/15_subsample/15_subsample_array.sbatch")
+J_QC2=$(sbatch --parsable --array="1-${N}" --dependency="afterok:${J_SUB}" "${S}/16_fastqc/16_fastqc_array.sbatch")
+J_ALN=$(sbatch --parsable --array="1-${N}" --dependency="afterok:${J_SUB}" "${S}/17_star/17_star_align_array.sbatch")
+J_CNT=$(sbatch --parsable                  --dependency="afterok:${J_ALN}" "${S}/18_featurecounts/18_featurecounts.sbatch")
+J_QMP=$(sbatch --parsable --array="1-${N}" --dependency="afterok:${J_ALN}" "${S}/19_qualimap/19_qualimap_array.sbatch")
 J_MQC=$(sbatch --parsable                  --dependency="afterok:${J_CNT}:${J_QMP}" "${S}/00_multiqc/00_multiqc.sbatch")
 
 printf "11_fastqc         %s\n" "$J_QC"
 printf "12_sortmerna      %s\n" "$J_RNA"
 printf "13_fastq_screen   %s  (dep: %s)\n" "$J_FQS" "$J_RNA"
 printf "14_fastp          %s  (dep: %s)\n" "$J_TRM" "$J_RNA"
-printf "15_star           %s  (dep: %s)\n" "$J_ALN" "$J_TRM"
-printf "16_featurecounts  %s  (dep: %s)\n" "$J_CNT" "$J_ALN"
-printf "17_qualimap       %s  (dep: %s)\n" "$J_QMP" "$J_ALN"
+printf "15_subsample      %s  (dep: %s)\n" "$J_SUB" "$J_TRM"
+printf "16_fastqc_sub     %s  (dep: %s)\n" "$J_QC2" "$J_SUB"
+printf "17_star           %s  (dep: %s)\n" "$J_ALN" "$J_SUB"
+printf "18_featurecounts  %s  (dep: %s)\n" "$J_CNT" "$J_ALN"
+printf "19_qualimap       %s  (dep: %s)\n" "$J_QMP" "$J_ALN"
 printf "00_multiqc        %s  (dep: %s:%s)\n" "$J_MQC" "$J_CNT" "$J_QMP"
 echo ""
 echo "squeue -u $USER"
