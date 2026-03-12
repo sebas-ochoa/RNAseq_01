@@ -59,8 +59,17 @@ mkdir -p \
   "${IDX_DIR}/adapters"
 
 echo "[INFO] Building Bowtie2 index: Drosophila..."
+if [[ -r "$FASTA" ]]; then
+  DROSO_REF="$FASTA"
+elif [[ -r "$FASTA_GZ" ]]; then
+  DROSO_REF="$FASTA_GZ"
+else
+  echo "[ERROR] Drosophila FASTA not found or not readable at $FASTA or $FASTA_GZ" >&2
+  exit 1
+fi
+echo "[INFO] Using: $DROSO_REF"
 bowtie2-build --threads "$THREADS" \
-  "$FASTA" "${IDX_DIR}/drosophila/drosophila"
+  "$DROSO_REF" "${IDX_DIR}/drosophila/drosophila"
 
 echo "[INFO] Building Bowtie2 index: Human GRCh38..."
 bowtie2-build --threads "$THREADS" \
