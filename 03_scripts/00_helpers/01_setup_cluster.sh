@@ -59,12 +59,15 @@ mkdir -p \
   "${IDX_DIR}/adapters"
 
 echo "[INFO] Building Bowtie2 index: Drosophila..."
+DROSO_STAGING="${STAGING}/fastq_screen/refs/drosophila/drosophila.fa.gz"
 if [[ -r "$FASTA" ]]; then
   DROSO_REF="$FASTA"
 elif [[ -r "$FASTA_GZ" ]]; then
   DROSO_REF="$FASTA_GZ"
+elif [[ -r "$DROSO_STAGING" ]]; then
+  DROSO_REF="$DROSO_STAGING"
 else
-  echo "[ERROR] Drosophila FASTA not found or not readable at $FASTA or $FASTA_GZ" >&2
+  echo "[ERROR] Drosophila FASTA not found at $FASTA, $FASTA_GZ, or $DROSO_STAGING" >&2
   exit 1
 fi
 echo "[INFO] Using: $DROSO_REF"

@@ -15,6 +15,7 @@ echo "[INFO] Staging dir: $STAGING"
 mkdir -p \
   "${STAGING}/sortmerna/db" \
   "${STAGING}/fastq_screen" \
+  "${STAGING}/fastq_screen/refs/drosophila" \
   "${STAGING}/fastq_screen/refs/human" \
   "${STAGING}/fastq_screen/refs/ecoli" \
   "${STAGING}/fastq_screen/refs/phix" \
@@ -60,6 +61,12 @@ curl -fL \
 # ---------------------------------------------------------------------------
 # FastQ Screen reference genomes
 # ---------------------------------------------------------------------------
+
+# Drosophila melanogaster BDGP6.46 (~47MB) — needed for bowtie2 index
+echo "[INFO] Downloading Drosophila melanogaster FASTA..."
+curl -fL \
+  "https://ftp.ensembl.org/pub/release-113/fasta/drosophila_melanogaster/dna/Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa.gz" \
+  -o "${STAGING}/fastq_screen/refs/drosophila/drosophila.fa.gz"
 
 # Human GRCh38 primary assembly (no alt, ~900MB)
 echo "[INFO] Downloading Human GRCh38 (primary assembly)..."
