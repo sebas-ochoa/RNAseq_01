@@ -3,7 +3,13 @@
 02_work/04_ref/
 90_scratch/
 00_admin/env/
-05_analysis/de_timecourse/
+00_admin/metadata/
+04_logs/
+05_analysis/
+98_docs/
+99_mercor/
+.RData
+.Rhistory
 *.fastq.gz
 *.fq.gz
 *.bam
@@ -13,4 +19,3 @@
 *.json
 *.zip
 .DS_Store
-05_analysis/scRNA-Seq_gene_expression_fb_2025_05.tsv.gz.tsv
