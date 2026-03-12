@@ -39,11 +39,11 @@ echo "[INFO] Sample: $SAMPLE"
   --ref "${SORTMERNA_DB_DIR}/rfam-5.8s-database-id98.fasta" \
   --reads "$R1" \
   --reads "$R2" \
-  --aligned "${WORKDIR}/${SAMPLE}.rRNA" \
-  --other   "${SORTMERNA_DIR}/${SAMPLE}" \
+  --fastx \
   --paired-in \
   --out2 \
-  --fastx \
+  --aligned "${WORKDIR}/${SAMPLE}.rRNA" \
+  --other   "${SORTMERNA_DIR}/${SAMPLE}" \
   --threads "$SLURM_CPUS_PER_TASK" \
   --workdir "$WORKDIR"
 
