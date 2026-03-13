@@ -1,0 +1,10 @@
+#Fastq_screen version: 0.16.0	#Aligner: bowtie2	#Reads in subset: 100000
+Genome	#Reads_processed	#Unmapped	%Unmapped	#One_hit_one_genome	%One_hit_one_genome	#Multiple_hits_one_genome	%Multiple_hits_one_genome	#One_hit_multiple_genomes	%One_hit_multiple_genomes	Multiple_hits_multiple_genomes	%Multiple_hits_multiple_genomes
+Drosophila	99985	69	0.07	77333	77.34	21743	21.75	483	0.48	357	0.36
+Human	99985	99260	99.27	0	0.00	0	0.00	249	0.25	476	0.48
+E_coli	99985	99985	100.00	0	0.00	0	0.00	0	0.00	0	0.00
+PhiX	99985	99985	100.00	0	0.00	0	0.00	0	0.00	0	0.00
+Adapters	99985	99893	99.90	0	0.00	0	0.00	75	0.08	17	0.02
+Vectors	99985	99851	99.87	0	0.00	0	0.00	2	0.00	132	0.13
+
+%Hit_no_genomes: 0.07
