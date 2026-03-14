@@ -14,6 +14,7 @@ PROJECT_ROOT="${SLURM_SUBMIT_DIR:-$(pwd)}"
 cd "$PROJECT_ROOT"
 source "${PROJECT_ROOT}/00_admin/config/pipeline.env"
 
+module load stack/2024-06
 module load "${SEQTK_MODULE}"
 
 LINE=$(sed -n "$((SLURM_ARRAY_TASK_ID+1))p" "$SAMPLES_TSV")

@@ -53,6 +53,7 @@ chmod u+rw,g+rw "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz" \
                 "${SORTMERNA_DIR}/${SAMPLE}_rev.fq.gz"
 
 # Sync pairs: filter fwd by rev names to fix --paired-in bug in SortMeRNA v4
+module load stack/2024-06
 module load "${SEQTK_MODULE}"
 SYNCDIR="${TMP_ROOT}/sync_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
 mkdir -p "$SYNCDIR"
