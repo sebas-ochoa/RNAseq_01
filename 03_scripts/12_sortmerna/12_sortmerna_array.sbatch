@@ -49,4 +49,19 @@ echo "[INFO] Sample: $SAMPLE"
 
 rm -rf "$WORKDIR"
 
+chmod u+rw,g+rw "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz" \
+                "${SORTMERNA_DIR}/${SAMPLE}_rev.fq.gz"
+
+# Sync pairs: filter fwd by rev names to fix --paired-in bug in SortMeRNA v4
+module load "${SEQTK_MODULE}"
+SYNCDIR="${TMP_ROOT}/sync_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
+mkdir -p "$SYNCDIR"
+zcat "${SORTMERNA_DIR}/${SAMPLE}_rev.fq.gz" \
+  | awk 'NR%4==1{print substr($1,2)}' > "${SYNCDIR}/names.txt"
+seqtk subseq "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz" "${SYNCDIR}/names.txt" \
+  | gzip -c > "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz.tmp"
+mv "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz.tmp" "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz"
+chmod u+rw,g+rw "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz"
+rm -rf "$SYNCDIR"
+
 echo "[INFO] Done: ${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz"
