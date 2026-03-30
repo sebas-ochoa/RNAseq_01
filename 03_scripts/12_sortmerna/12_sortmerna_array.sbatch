@@ -40,7 +40,7 @@ echo "[INFO] Sample: $SAMPLE"
   --reads "$R1" \
   --reads "$R2" \
   --fastx \
-  --paired-in \
+  --paired_out \
   --out2 \
   --aligned "${WORKDIR}/${SAMPLE}.rRNA" \
   --other   "${SORTMERNA_DIR}/${SAMPLE}" \
@@ -52,17 +52,37 @@ rm -rf "$WORKDIR"
 chmod u+rw,g+rw "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz" \
                 "${SORTMERNA_DIR}/${SAMPLE}_rev.fq.gz"
 
-# Sync pairs: filter fwd by rev names to fix --paired-in bug in SortMeRNA v4
+# Bidirectional sync: keep only read names present in BOTH fwd and rev
 module load stack/2024-06
 module load "${SEQTK_MODULE}"
 SYNCDIR="${TMP_ROOT}/sync_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
 mkdir -p "$SYNCDIR"
-zcat "${SORTMERNA_DIR}/${SAMPLE}_rev.fq.gz" \
-  | awk 'NR%4==1{print substr($1,2)}' > "${SYNCDIR}/names.txt"
-seqtk subseq "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz" "${SYNCDIR}/names.txt" \
-  | gzip -c > "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz.tmp"
-mv "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz.tmp" "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz"
-chmod u+rw,g+rw "${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz"
+
+FWD="${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz"
+REV="${SORTMERNA_DIR}/${SAMPLE}_rev.fq.gz"
+
+zcat "$FWD" | awk 'NR%4==1{print substr($1,2)}' > "${SYNCDIR}/fwd_names.txt"
+zcat "$REV" | awk 'NR%4==1{print substr($1,2)}' > "${SYNCDIR}/rev_names.txt"
+
+N_FWD_RAW=$(wc -l < "${SYNCDIR}/fwd_names.txt")
+N_REV_RAW=$(wc -l < "${SYNCDIR}/rev_names.txt")
+echo "[INFO] Pre-sync — fwd: $N_FWD_RAW  rev: $N_REV_RAW"
+
+if [[ "$N_FWD_RAW" -eq "$N_REV_RAW" ]]; then
+  echo "[INFO] Already equal — skipping sync"
+else
+  # Intersection: names present in both files
+  awk 'NR==FNR{a[$0]; next} $0 in a' \
+    "${SYNCDIR}/fwd_names.txt" "${SYNCDIR}/rev_names.txt" > "${SYNCDIR}/common.txt"
+  echo "[INFO] Common reads: $(wc -l < "${SYNCDIR}/common.txt")"
+
+  seqtk subseq "$FWD" "${SYNCDIR}/common.txt" | gzip -c > "${FWD}.tmp"
+  seqtk subseq "$REV" "${SYNCDIR}/common.txt" | gzip -c > "${REV}.tmp"
+  mv "${FWD}.tmp" "$FWD"
+  mv "${REV}.tmp" "$REV"
+  chmod u+rw,g+rw "$FWD" "$REV"
+fi
+
 rm -rf "$SYNCDIR"
 
 echo "[INFO] Done: ${SORTMERNA_DIR}/${SAMPLE}_fwd.fq.gz"

@@ -29,18 +29,34 @@ echo "[INFO] Sample: $SAMPLE"
 SYNCDIR="${TMP_ROOT}/sync_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
 mkdir -p "$SYNCDIR"
 
-# Extract read names from rev (the reference — smaller due to sortmerna v4 bug)
-zcat "$REV" | awk 'NR%4==1{print substr($1,2)}' > "${SYNCDIR}/names.txt"
-N_REV=$(wc -l < "${SYNCDIR}/names.txt")
-echo "[INFO] Rev reads: $N_REV"
+# Extract read names from both files
+zcat "$FWD" | awk 'NR%4==1{print substr($1,2)}' > "${SYNCDIR}/fwd_names.txt"
+zcat "$REV" | awk 'NR%4==1{print substr($1,2)}' > "${SYNCDIR}/rev_names.txt"
 
-# Filter fwd to keep only reads present in rev (maintains input order)
-seqtk subseq "$FWD" "${SYNCDIR}/names.txt" | gzip -c > "${FWD}.tmp"
-mv "${FWD}.tmp" "$FWD"
-chmod u+rw,g+rw "$FWD"
+N_FWD_RAW=$(wc -l < "${SYNCDIR}/fwd_names.txt")
+N_REV_RAW=$(wc -l < "${SYNCDIR}/rev_names.txt")
+echo "[INFO] Pre-sync — fwd: $N_FWD_RAW  rev: $N_REV_RAW"
 
-N_FWD=$(zcat "$FWD" | awk 'END{print NR/4}')
-echo "[INFO] After sync — fwd: $N_FWD  rev: $N_REV"
-[[ "$N_FWD" -eq "$N_REV" ]] && echo "[INFO] OK: synchronized" || echo "[WARN] Still unequal"
+if [[ "$N_FWD_RAW" -eq "$N_REV_RAW" ]]; then
+  echo "[INFO] Already equal — skipping sync"
+else
+  # Bidirectional: keep only names present in BOTH files
+  awk 'NR==FNR{a[$0]; next} $0 in a' \
+    "${SYNCDIR}/fwd_names.txt" "${SYNCDIR}/rev_names.txt" > "${SYNCDIR}/common.txt"
+  N_COMMON=$(wc -l < "${SYNCDIR}/common.txt")
+  echo "[INFO] Common reads: $N_COMMON"
+
+  seqtk subseq "$FWD" "${SYNCDIR}/common.txt" | gzip -c > "${FWD}.tmp"
+  seqtk subseq "$REV" "${SYNCDIR}/common.txt" | gzip -c > "${REV}.tmp"
+  mv "${FWD}.tmp" "$FWD"
+  mv "${REV}.tmp" "$REV"
+  chmod u+rw,g+rw "$FWD" "$REV"
+
+  # Verify
+  N_FWD_FINAL=$(zcat "$FWD" | awk 'END{print NR/4}')
+  N_REV_FINAL=$(zcat "$REV" | awk 'END{print NR/4}')
+  echo "[INFO] After sync — fwd: $N_FWD_FINAL  rev: $N_REV_FINAL"
+  [[ "$N_FWD_FINAL" -eq "$N_REV_FINAL" ]] && echo "[INFO] OK: synchronized" || echo "[WARN] Still unequal"
+fi
 
 rm -rf "$SYNCDIR"
