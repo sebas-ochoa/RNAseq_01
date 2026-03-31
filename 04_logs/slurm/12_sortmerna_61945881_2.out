@@ -1,0 +1,923 @@
+[INFO] Sample: HSF4_0H_2
+[process:1393] === Options processing starts ... ===
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/bin/sortmerna
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-16s-id90.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-23s-id98.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-18s-id95.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-28s-id98.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5s-database-id98.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5.8s-database-id98.fasta of previous flag: --ref
+Found flag: --reads
+Found value: 01_raw/fastq/HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_1.fq.gz of previous flag: --reads
+Found flag: --reads
+Found value: 01_raw/fastq/HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_2.fq.gz of previous flag: --reads
+Found flag: --fastx
+Previous flag: --fastx is Boolean. Setting to True
+Found flag: --paired_out
+Previous flag: --paired_out is Boolean. Setting to True
+Found flag: --out2
+Previous flag: --out2 is Boolean. Setting to True
+Found flag: --aligned
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA of previous flag: --aligned
+Found flag: --other
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2 of previous flag: --other
+Found flag: --threads
+Found value: 16 of previous flag: --threads
+Found flag: --workdir
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2 of previous flag: --workdir
+[opt_workdir:995] Using WORKDIR: "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2" as specified
+[process:1483] Processing option: aligned with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA
+[process:1483] Processing option: fastx with value: 
+[process:1483] Processing option: other with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2
+[process:1483] Processing option: out2 with value: 
+[process:1483] Processing option: paired_out with value: 
+[process:1483] Processing option: reads with value: 01_raw/fastq/HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_1.fq.gz
+[opt_reads:98] Processing reads file [1] out of total [2] files
+[process:1483] Processing option: reads with value: 01_raw/fastq/HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_2.fq.gz
+[opt_reads:98] Processing reads file [2] out of total [2] files
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta
+[opt_ref:158] Processing reference [1] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta
+[opt_ref:158] Processing reference [2] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-16s-id90.fasta
+[opt_ref:158] Processing reference [3] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-16s-id90.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-23s-id98.fasta
+[opt_ref:158] Processing reference [4] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-23s-id98.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-18s-id95.fasta
+[opt_ref:158] Processing reference [5] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-18s-id95.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-28s-id98.fasta
+[opt_ref:158] Processing reference [6] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-28s-id98.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5s-database-id98.fasta
+[opt_ref:158] Processing reference [7] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5s-database-id98.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5.8s-database-id98.fasta
+[opt_ref:158] Processing reference [8] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5.8s-database-id98.fasta" exists and is readable
+[process:1483] Processing option: threads with value: 16
+[process:1503] === Options processing done ===
+[process:1504] Alignment type: [best:1 num_alignments:1 min_lis:2 seeds:2]
+[validate_kvdbdir:1248] Key-value DB location "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/kvdb"
+[validate_kvdbdir:1284] Creating KVDB directory: "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/kvdb"
+[validate_idxdir:1214] Using index directory: "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/idx"
+[validate_idxdir:1222] Created index directory - OK
+[validate_readb_dir:1306] Using split reads directory : "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb"
+[validate_readb_dir:1314] Created split reads directory - OK
+[main:62] Running command:
+/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/bin/sortmerna --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-16s-id90.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-23s-id98.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-18s-id95.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-28s-id98.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5s-database-id98.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5.8s-database-id98.fasta --reads 01_raw/fastq/HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_1.fq.gz --reads 01_raw/fastq/HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_2.fq.gz --fastx --paired_out --out2 --aligned /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA --other /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2 --threads 16 --workdir /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2 
+[build_index:1123] ==== Index building started ====
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta of size: 3893959 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/idx/3436099190853847617
+  done.
+
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta of size: 752022 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/idx/3400685301612210653
+  done.
+
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-16s-id90.fasta of size: 19437013 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/idx/15734375058464002811
+  done.
+
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-23s-id98.fasta of size: 12911743 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/idx/17299952793705614139
+  done.
+
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-18s-id95.fasta of size: 13259584 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/idx/2700646386527218729
+  done.
+
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-28s-id98.fasta of size: 14945070 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/idx/1845323523482939374
+  done.
+
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5s-database-id98.fasta of size: 8525326 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/idx/13019673092862722585
+  done.
+
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5.8s-database-id98.fasta of size: 2280449 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/idx/2169995244134016533
+  done.
+
+[build_index:2091] ==== Done index building in 198.619 sec ====
+
+[init:108] Readfeed init started
+[define_format:881] file: "01_raw/fastq/HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_1.fq.gz" is FASTQ gzipped
+[define_format:881] file: "01_raw/fastq/HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_2.fq.gz" is FASTQ gzipped
+[count_reads:915] started count  ...   
+[next:322] EOF FWD reached. Total reads: 60623791
+[next:322] EOF REV reached. Total reads: 60623791
+[count_reads:945] done count. Elapsed time: 320.779 sec. Total reads: 121247582
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_0.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_0.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_1.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_1.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_2.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_2.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_3.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_3.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_4.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_4.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_5.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_5.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_6.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_6.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_7.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_7.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_8.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_8.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_9.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_9.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_10.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_10.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_11.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_11.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_12.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_12.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_13.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_13.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_14.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_14.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/fwd_15.fq.gz
+[init_split_files:967] added file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/readb/rev_15.fq.gz
+[split:605] start splitting. Using number of splits equals number of processing threads: 16
+[next:322] EOF FWD reached. Total reads: 60623791
+[next:322] EOF REV reached. Total reads: 60623791
+[split:717] Done splitting. Reads count: 121247582 Runtime sec: 4319.26
+
+[init:135] Readfeed init done in sec [4640.1]
+[store_to_db:292] Stored Reads statistics to DB:
+     all_reads_count= 121247582 all_reads_len= 18187137300 min_read_len= 150 max_read_len= 150 total_aligned= 0 total_aligned_id= 0 total_aligned_cov= 0 total_aligned_id_cov= 0 total_denovo= 0 num_short= 0 reads_matched_per_db= TODO is_stats_calc= 0 is_total_reads_mapped_cov= 0
+
+[align:143] ==== Starting alignment ====
+[align:146] Number of cores: 128
+[align:163] Using number of Processor threads: 16
+[Refstats:60] Index Statistics calculation starts ... done in: 2.55128 sec
+[align:185] Loading index: 0 part: 1/1 Memory KB: 330 ... 
+[align:190] done in [1.22473] sec Memory KB: 330
+[align:193] Loading references ...
+[align:197] done in [0.0316921] sec. Memory KB: 330
+[align2:70] Processor 0 thread 22405390968384 started
+[align2:70] Processor 6 thread 22405403575872 started
+[align2:70] Processor 12 thread 22405416183360 started
+[align2:70] Processor 13 thread 22405418284608 started
+[align2:70] Processor 1 thread 22405393069632 started
+[align2:70] Processor 4 thread 22405399373376 started
+[align2:70] Processor 3 thread 22405397272128 started
+[align2:70] Processor 5 thread 22405401474624 started
+[align2:70] Processor 7 thread 22405405677120 started
+[align2:70] Processor 8 thread 22405407778368 started
+[align2:70] Processor 9 thread 22405409879616 started
+[align2:70] Processor 15 thread 22405384664640 started
+[align2:70] Processor 10 thread 22405411980864 started
+[align2:70] Processor 2 thread 22405395170880 started
+[align2:70] Processor 14 thread 22405386765888 started
+[align2:70] Processor 11 thread 22405414082112 started
+[next:455] EOF FWD reached. Total reads: 3788986
+[next:455] EOF REV reached. Total reads: 3788986
+[align2:133] Processor 15 thread 22405384664640 done. Processed 7577972 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3424 Runtime sec: 368.512
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 0 thread 22405390968384 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3617 Runtime sec: 369.443
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 14 thread 22405386765888 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3641 Runtime sec: 370.73
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 6 thread 22405403575872 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3544 Runtime sec: 371.441
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 13 thread 22405418284608 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3515 Runtime sec: 371.83
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 11 thread 22405414082112 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3541 Runtime sec: 373.488
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 3 thread 22405397272128 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3669 Runtime sec: 374.455
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 1 thread 22405393069632 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3570 Runtime sec: 374.534
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 5 thread 22405401474624 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3475 Runtime sec: 374.738
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 9 thread 22405409879616 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3500 Runtime sec: 374.817
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 4 thread 22405399373376 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3599 Runtime sec: 375.171
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 8 thread 22405407778368 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3578 Runtime sec: 375.694
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 7 thread 22405405677120 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3630 Runtime sec: 376.346
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 12 thread 22405416183360 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3633 Runtime sec: 377.58
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 10 thread 22405411980864 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3520 Runtime sec: 378.587
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 2 thread 22405395170880 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 3600 Runtime sec: 382.855
+[align:220] done index: 0 part: 1 in 382.855 sec Memory KB: 373
+[align:227] Index and References unloaded in 0.0532539 sec. Memory KB: 373
+[align:185] Loading index: 1 part: 1/1 Memory KB: 373 ... 
+[align:190] done in [0.605139] sec Memory KB: 373
+[align:193] Loading references ...
+[align:197] done in [0.0561309] sec. Memory KB: 373
+[align2:70] Processor 0 thread 22405384664640 started
+[align2:70] Processor 1 thread 22405386765888 started
+[align2:70] Processor 2 thread 22405418284608 started
+[align2:70] Processor 3 thread 22405416183360 started
+[align2:70] Processor 7 thread 22405407778368 started
+[align2:70] Processor 8 thread 22405405677120 started
+[align2:70] Processor 12 thread 22405397272128 started
+[align2:70] Processor 13 thread 22405395170880 started
+[align2:70] Processor 6 thread 22405409879616 started
+[align2:70] Processor 14 thread 22405393069632 started
+[align2:70] Processor 11 thread 22405399373376 started
+[align2:70] Processor 5 thread 22405411980864 started
+[align2:70] Processor 9 thread 22405403575872 started
+[align2:70] Processor 4 thread 22405414082112 started
+[align2:70] Processor 15 thread 22405390968384 started
+[align2:70] Processor 10 thread 22405401474624 started
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 6 thread 22405409879616 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7161 Runtime sec: 244.083
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 14 thread 22405393069632 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7113 Runtime sec: 244.738
+[next:455] EOF FWD reached. Total reads: 3788986
+[next:455] EOF REV reached. Total reads: 3788986
+[align2:133] Processor 15 thread 22405390968384 done. Processed 7577972 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 6967 Runtime sec: 245.676
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 10 thread 22405401474624 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7195 Runtime sec: 245.786
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 8 thread 22405405677120 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7127 Runtime sec: 245.993
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 3 thread 22405416183360 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7115 Runtime sec: 246.091
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 13 thread 22405395170880 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7104 Runtime sec: 247.578
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 7 thread 22405407778368 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7223 Runtime sec: 247.941
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 11 thread 22405399373376 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7046 Runtime sec: 248.249
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 5 thread 22405411980864 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 6903 Runtime sec: 248.337
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 9 thread 22405403575872 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 6963 Runtime sec: 249.879
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 12 thread 22405397272128 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7237 Runtime sec: 250.041
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 4 thread 22405414082112 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7226 Runtime sec: 250.38
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 1 thread 22405386765888 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7198 Runtime sec: 251.6
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 0 thread 22405384664640 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7227 Runtime sec: 254.954
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 2 thread 22405418284608 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 7223 Runtime sec: 255.687
+[align:220] done index: 1 part: 1 in 255.687 sec Memory KB: 399
+[align:227] Index and References unloaded in 0.0235351 sec. Memory KB: 399
+[align:185] Loading index: 2 part: 1/1 Memory KB: 399 ... 
+[align:190] done in [4.77759] sec Memory KB: 576
+[align:193] Loading references ...
+[align:197] done in [0.394211] sec. Memory KB: 596
+[align2:70] Processor 0 thread 22405390968384 started
+[align2:70] Processor 1 thread 22405393069632 started
+[align2:70] Processor 2 thread 22405395170880 started
+[align2:70] Processor 4 thread 22405399373376 started
+[align2:70] Processor 3 thread 22405397272128 started
+[align2:70] Processor 5 thread 22405401474624 started
+[align2:70] Processor 6 thread 22405403575872 started
+[align2:70] Processor 7 thread 22405405677120 started
+[align2:70] Processor 14 thread 22405386765888 started
+[align2:70] Processor 9 thread 22405409879616 started
+[align2:70] Processor 10 thread 22405411980864 started
+[align2:70] Processor 8 thread 22405407778368 started
+[align2:70] Processor 15 thread 22405384664640 started
+[align2:70] Processor 12 thread 22405416183360 started
+[align2:70] Processor 13 thread 22405418284608 started
+[align2:70] Processor 11 thread 22405414082112 started
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 5 thread 22405401474624 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 14231 Runtime sec: 795.035
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 1 thread 22405393069632 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 14546 Runtime sec: 798.411
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 7 thread 22405405677120 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 14691 Runtime sec: 799.936
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 4 thread 22405399373376 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 13636 Runtime sec: 800.401
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 13 thread 22405418284608 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 14142 Runtime sec: 801.175
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 11 thread 22405414082112 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 13994 Runtime sec: 801.271
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 0 thread 22405390968384 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 13486 Runtime sec: 802.793
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 9 thread 22405409879616 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 13894 Runtime sec: 803.701
+[next:455] EOF FWD reached. Total reads: 3788986
+[next:455] EOF REV reached. Total reads: 3788986
+[align2:133] Processor 15 thread 22405384664640 done. Processed 7577972 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 14244 Runtime sec: 803.793
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 12 thread 22405416183360 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 13770 Runtime sec: 804.21
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 14 thread 22405386765888 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 13808 Runtime sec: 804.64
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 6 thread 22405403575872 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 14134 Runtime sec: 805.219
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 2 thread 22405395170880 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 13748 Runtime sec: 810.298
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 10 thread 22405411980864 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 13278 Runtime sec: 810.956
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 3 thread 22405397272128 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 14066 Runtime sec: 811.08
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 8 thread 22405407778368 done. Processed 7577974 reads. Skipped already processed: 0 reads Aligned reads (passing E-value): 13440 Runtime sec: 812.73
+[align:220] done index: 2 part: 1 in 812.747 sec Memory KB: 659
+[align:227] Index and References unloaded in 0.178139 sec. Memory KB: 659
+[align:185] Loading index: 3 part: 1/1 Memory KB: 659 ... 
+[align:190] done in [3.98984] sec Memory KB: 659
+[align:193] Loading references ...
+[align:197] done in [0.24532] sec. Memory KB: 659
+[align2:70] Processor 0 thread 22405384664640 started
+[align2:70] Processor 1 thread 22405386765888 started
+[align2:70] Processor 3 thread 22405416183360 started
+[align2:70] Processor 2 thread 22405418284608 started
+[align2:70] Processor 4 thread 22405414082112 started
+[align2:70] Processor 6 thread 22405409879616 started
+[align2:70] Processor 5 thread 22405411980864 started
+[align2:70] Processor 7 thread 22405407778368 started
+[align2:70] Processor 8 thread 22405405677120 started
+[align2:70] Processor 9 thread 22405403575872 started
+[align2:70] Processor 12 thread 22405397272128 started
+[align2:70] Processor 11 thread 22405399373376 started
+[align2:70] Processor 14 thread 22405393069632 started
+[align2:70] Processor 13 thread 22405395170880 started
+[align2:70] Processor 10 thread 22405401474624 started
+[align2:70] Processor 15 thread 22405390968384 started
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 6 thread 22405409879616 done. Processed 7577834 reads. Skipped already processed: 139 reads Aligned reads (passing E-value): 60058 Runtime sec: 765.2
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 1 thread 22405386765888 done. Processed 7577824 reads. Skipped already processed: 139 reads Aligned reads (passing E-value): 58920 Runtime sec: 768.545
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 4 thread 22405414082112 done. Processed 7577852 reads. Skipped already processed: 114 reads Aligned reads (passing E-value): 60605 Runtime sec: 769.626
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 5 thread 22405411980864 done. Processed 7577844 reads. Skipped already processed: 130 reads Aligned reads (passing E-value): 59403 Runtime sec: 771.111
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 9 thread 22405403575872 done. Processed 7577836 reads. Skipped already processed: 133 reads Aligned reads (passing E-value): 58044 Runtime sec: 771.61
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 13 thread 22405395170880 done. Processed 7577841 reads. Skipped already processed: 131 reads Aligned reads (passing E-value): 58917 Runtime sec: 771.694
+[next:455] EOF REV reached. Total reads: 3788986
+[align2:133] Processor 15 thread 22405390968384 done. Processed 7577825 reads. Skipped already processed: 140 reads Aligned reads (passing E-value): 58531 Runtime sec: 772.107
+[next:455] EOF REV reached. Total reads: 3788987
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 11 thread 22405399373376 done. Processed 7577831 reads. Skipped already processed: 143 reads Aligned reads (passing E-value): 59027 Runtime sec: 772.863
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 7 thread 22405407778368 done. Processed 7577829 reads. Skipped already processed: 137 reads Aligned reads (passing E-value): 59385 Runtime sec: 773.013
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 8 thread 22405405677120 done. Processed 7577817 reads. Skipped already processed: 143 reads Aligned reads (passing E-value): 58603 Runtime sec: 773.032
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 0 thread 22405384664640 done. Processed 7577814 reads. Skipped already processed: 156 reads Aligned reads (passing E-value): 58865 Runtime sec: 773.149
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 14 thread 22405393069632 done. Processed 7577826 reads. Skipped already processed: 145 reads Aligned reads (passing E-value): 58869 Runtime sec: 773.273
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 10 thread 22405401474624 done. Processed 7577831 reads. Skipped already processed: 139 reads Aligned reads (passing E-value): 60078 Runtime sec: 773.84
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 3 thread 22405416183360 done. Processed 7577801 reads. Skipped already processed: 155 reads Aligned reads (passing E-value): 59056 Runtime sec: 774.741
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 12 thread 22405397272128 done. Processed 7577838 reads. Skipped already processed: 136 reads Aligned reads (passing E-value): 59938 Runtime sec: 775.758
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 2 thread 22405418284608 done. Processed 7577805 reads. Skipped already processed: 155 reads Aligned reads (passing E-value): 61282 Runtime sec: 777.539
+[align:220] done index: 3 part: 1 in 777.539 sec Memory KB: 787
+[align:227] Index and References unloaded in 0.137431 sec. Memory KB: 787
+[align:185] Loading index: 4 part: 1/1 Memory KB: 787 ... 
+[align:190] done in [3.82613] sec Memory KB: 787
+[align:193] Loading references ...
+[align:197] done in [0.244877] sec. Memory KB: 787
+[align2:70] Processor 0 thread 22405390968384 started
+[align2:70] Processor 1 thread 22405393069632 started
+[align2:70] Processor 2 thread 22405395170880 started
+[align2:70] Processor 3 thread 22405397272128 started
+[align2:70] Processor 5 thread 22405401474624 started
+[align2:70] Processor 4 thread 22405399373376 started
+[align2:70] Processor 15 thread 22405384664640 started
+[align2:70] Processor 8 thread 22405407778368 started
+[align2:70] Processor 9 thread 22405409879616 started
+[align2:70] Processor 6 thread 22405403575872 started
+[align2:70] Processor 12 thread 22405416183360 started
+[align2:70] Processor 10 thread 22405411980864 started
+[align2:70] Processor 7 thread 22405405677120 started
+[align2:70] Processor 11 thread 22405414082112 started
+[align2:70] Processor 13 thread 22405418284608 started
+[align2:70] Processor 14 thread 22405386765888 started
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 8 thread 22405407778368 done. Processed 7577531 reads. Skipped already processed: 441 reads Aligned reads (passing E-value): 74373 Runtime sec: 829.741
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 6 thread 22405403575872 done. Processed 7577529 reads. Skipped already processed: 440 reads Aligned reads (passing E-value): 75735 Runtime sec: 831.718
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 5 thread 22405401474624 done. Processed 7577580 reads. Skipped already processed: 393 reads Aligned reads (passing E-value): 74830 Runtime sec: 831.962
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 7 thread 22405405677120 done. Processed 7577475 reads. Skipped already processed: 491 reads Aligned reads (passing E-value): 75404 Runtime sec: 832.721
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 1 thread 22405393069632 done. Processed 7577535 reads. Skipped already processed: 435 reads Aligned reads (passing E-value): 74361 Runtime sec: 833.134
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 4 thread 22405399373376 done. Processed 7577514 reads. Skipped already processed: 436 reads Aligned reads (passing E-value): 76500 Runtime sec: 833.914
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 0 thread 22405390968384 done. Processed 7577503 reads. Skipped already processed: 465 reads Aligned reads (passing E-value): 74097 Runtime sec: 834.555
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 14 thread 22405386765888 done. Processed 7577518 reads. Skipped already processed: 443 reads Aligned reads (passing E-value): 74615 Runtime sec: 834.852
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 13 thread 22405418284608 done. Processed 7577582 reads. Skipped already processed: 391 reads Aligned reads (passing E-value): 74396 Runtime sec: 835.431
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 11 thread 22405414082112 done. Processed 7577526 reads. Skipped already processed: 445 reads Aligned reads (passing E-value): 74626 Runtime sec: 835.979
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 12 thread 22405416183360 done. Processed 7577556 reads. Skipped already processed: 417 reads Aligned reads (passing E-value): 75790 Runtime sec: 836.57
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 9 thread 22405409879616 done. Processed 7577542 reads. Skipped already processed: 417 reads Aligned reads (passing E-value): 73592 Runtime sec: 836.647
+[next:455] EOF REV reached. Total reads: 3788986
+[align2:133] Processor 15 thread 22405384664640 done. Processed 7577541 reads. Skipped already processed: 415 reads Aligned reads (passing E-value): 74026 Runtime sec: 837.936
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 2 thread 22405395170880 done. Processed 7577427 reads. Skipped already processed: 525 reads Aligned reads (passing E-value): 77090 Runtime sec: 838.096
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 3 thread 22405397272128 done. Processed 7577485 reads. Skipped already processed: 462 reads Aligned reads (passing E-value): 74574 Runtime sec: 838.424
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 10 thread 22405411980864 done. Processed 7577534 reads. Skipped already processed: 437 reads Aligned reads (passing E-value): 75849 Runtime sec: 839.076
+[align:220] done index: 4 part: 1 in 839.077 sec Memory KB: 856
+[align:227] Index and References unloaded in 0.135426 sec. Memory KB: 856
+[align:185] Loading index: 5 part: 1/1 Memory KB: 856 ... 
+[align:190] done in [4.75768] sec Memory KB: 856
+[align:193] Loading references ...
+[align:197] done in [0.315413] sec. Memory KB: 856
+[align2:70] Processor 0 thread 22405384664640 started
+[align2:70] Processor 1 thread 22405386765888 started
+[align2:70] Processor 3 thread 22405416183360 started
+[align2:70] Processor 2 thread 22405418284608 started
+[align2:70] Processor 5 thread 22405411980864 started
+[align2:70] Processor 4 thread 22405414082112 started
+[align2:70] Processor 7 thread 22405407778368 started
+[align2:70] Processor 6 thread 22405409879616 started
+[align2:70] Processor 8 thread 22405405677120 started
+[align2:70] Processor 9 thread 22405403575872 started
+[align2:70] Processor 10 thread 22405401474624 started
+[align2:70] Processor 11 thread 22405399373376 started
+[align2:70] Processor 13 thread 22405395170880 started
+[align2:70] Processor 12 thread 22405397272128 started
+[align2:70] Processor 14 thread 22405393069632 started
+[align2:70] Processor 15 thread 22405390968384 started
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 9 thread 22405403575872 done. Processed 7568388 reads. Skipped already processed: 9577 reads Aligned reads (passing E-value): 81439 Runtime sec: 939.754
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 4 thread 22405414082112 done. Processed 7567967 reads. Skipped already processed: 10002 reads Aligned reads (passing E-value): 84514 Runtime sec: 940.087
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 14 thread 22405393069632 done. Processed 7568195 reads. Skipped already processed: 9691 reads Aligned reads (passing E-value): 82842 Runtime sec: 941.849
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 11 thread 22405399373376 done. Processed 7568322 reads. Skipped already processed: 9564 reads Aligned reads (passing E-value): 82642 Runtime sec: 942.037
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 6 thread 22405409879616 done. Processed 7568067 reads. Skipped already processed: 9855 reads Aligned reads (passing E-value): 84214 Runtime sec: 943.227
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 0 thread 22405384664640 done. Processed 7568179 reads. Skipped already processed: 9778 reads Aligned reads (passing E-value): 82016 Runtime sec: 943.496
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 5 thread 22405411980864 done. Processed 7568549 reads. Skipped already processed: 9415 reads Aligned reads (passing E-value): 83232 Runtime sec: 943.619
+[next:455] EOF REV reached. Total reads: 3788987
+[align2:133] Processor 13 thread 22405395170880 done. Processed 7568635 reads. Skipped already processed: 9330 reads Aligned reads (passing E-value): 82696 Runtime sec: 943.812
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 1 thread 22405386765888 done. Processed 7568418 reads. Skipped already processed: 9497 reads Aligned reads (passing E-value): 82645 Runtime sec: 943.952
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 3 thread 22405416183360 done. Processed 7568304 reads. Skipped already processed: 9611 reads Aligned reads (passing E-value): 82604 Runtime sec: 944.076
+[next:455] EOF FWD reached. Total reads: 3788986
+[align2:133] Processor 15 thread 22405390968384 done. Processed 7568460 reads. Skipped already processed: 9486 reads Aligned reads (passing E-value): 82198 Runtime sec: 944.154
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 8 thread 22405405677120 done. Processed 7567976 reads. Skipped already processed: 9886 reads Aligned reads (passing E-value): 82081 Runtime sec: 944.233
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 12 thread 22405397272128 done. Processed 7568084 reads. Skipped already processed: 9871 reads Aligned reads (passing E-value): 83790 Runtime sec: 947.206
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 7 thread 22405407778368 done. Processed 7567966 reads. Skipped already processed: 9952 reads Aligned reads (passing E-value): 83270 Runtime sec: 948.504
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 10 thread 22405401474624 done. Processed 7568062 reads. Skipped already processed: 9824 reads Aligned reads (passing E-value): 84015 Runtime sec: 950.516
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 2 thread 22405418284608 done. Processed 7567838 reads. Skipped already processed: 10064 reads Aligned reads (passing E-value): 85354 Runtime sec: 954.54
+[align:220] done index: 5 part: 1 in 954.541 sec Memory KB: 944
+[align:227] Index and References unloaded in 0.143751 sec. Memory KB: 944
+[align:185] Loading index: 6 part: 1/1 Memory KB: 944 ... 
+[align:190] done in [1.7464] sec Memory KB: 944
+[align:193] Loading references ...
+[align:197] done in [0.208272] sec. Memory KB: 777
+[align2:70] Processor 0 thread 22405390968384 started
+[align2:70] Processor 1 thread 22405393069632 started
+[align2:70] Processor 2 thread 22405395170880 started
+[align2:70] Processor 3 thread 22405397272128 started
+[align2:70] Processor 5 thread 22405401474624 started
+[align2:70] Processor 4 thread 22405399373376 started
+[align2:70] Processor 6 thread 22405403575872 started
+[align2:70] Processor 9 thread 22405409879616 started
+[align2:70] Processor 11 thread 22405414082112 started
+[align2:70] Processor 10 thread 22405411980864 started
+[align2:70] Processor 7 thread 22405405677120 started
+[align2:70] Processor 12 thread 22405416183360 started
+[align2:70] Processor 15 thread 22405384664640 started
+[align2:70] Processor 8 thread 22405407778368 started
+[align2:70] Processor 13 thread 22405418284608 started
+[align2:70] Processor 14 thread 22405386765888 started
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 4 thread 22405399373376 done. Processed 7558744 reads. Skipped already processed: 19172 reads Aligned reads (passing E-value): 75344 Runtime sec: 432.601
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 0 thread 22405390968384 done. Processed 7559122 reads. Skipped already processed: 18793 reads Aligned reads (passing E-value): 73002 Runtime sec: 433.729
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 7 thread 22405405677120 done. Processed 7558736 reads. Skipped already processed: 19017 reads Aligned reads (passing E-value): 74205 Runtime sec: 437.067
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 6 thread 22405403575872 done. Processed 7558870 reads. Skipped already processed: 19038 reads Aligned reads (passing E-value): 75031 Runtime sec: 438.416
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 8 thread 22405407778368 done. Processed 7559044 reads. Skipped already processed: 18684 reads Aligned reads (passing E-value): 73284 Runtime sec: 443.237
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 1 thread 22405393069632 done. Processed 7559138 reads. Skipped already processed: 18584 reads Aligned reads (passing E-value): 73559 Runtime sec: 445.157
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 12 thread 22405416183360 done. Processed 7558926 reads. Skipped already processed: 18976 reads Aligned reads (passing E-value): 74684 Runtime sec: 448.191
+[next:455] EOF FWD reached. Total reads: 3788986
+[align2:133] Processor 15 thread 22405384664640 done. Processed 7559526 reads. Skipped already processed: 18176 reads Aligned reads (passing E-value): 73502 Runtime sec: 450.092
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 14 thread 22405386765888 done. Processed 7559384 reads. Skipped already processed: 18583 reads Aligned reads (passing E-value): 73959 Runtime sec: 450.401
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 5 thread 22405401474624 done. Processed 7559642 reads. Skipped already processed: 18253 reads Aligned reads (passing E-value): 74396 Runtime sec: 450.836
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 10 thread 22405411980864 done. Processed 7558826 reads. Skipped already processed: 18895 reads Aligned reads (passing E-value): 74943 Runtime sec: 450.852
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 11 thread 22405414082112 done. Processed 7559590 reads. Skipped already processed: 18185 reads Aligned reads (passing E-value): 74019 Runtime sec: 453.134
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 2 thread 22405395170880 done. Processed 7558612 reads. Skipped already processed: 19247 reads Aligned reads (passing E-value): 76171 Runtime sec: 455.067
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 13 thread 22405418284608 done. Processed 7559642 reads. Skipped already processed: 18160 reads Aligned reads (passing E-value): 73866 Runtime sec: 456.673
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 9 thread 22405409879616 done. Processed 7559572 reads. Skipped already processed: 18198 reads Aligned reads (passing E-value): 72815 Runtime sec: 461.664
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 3 thread 22405397272128 done. Processed 7559354 reads. Skipped already processed: 18386 reads Aligned reads (passing E-value): 73826 Runtime sec: 468.702
+[align:220] done index: 6 part: 1 in 468.702 sec Memory KB: 782
+[align:227] Index and References unloaded in 0.0616245 sec. Memory KB: 782
+[align:185] Loading index: 7 part: 1/1 Memory KB: 782 ... 
+[align:190] done in [0.776462] sec Memory KB: 782
+[align:193] Loading references ...
+[align:197] done in [0.0878989] sec. Memory KB: 782
+[align2:70] Processor 0 thread 22405384664640 started
+[align2:70] Processor 1 thread 22405386765888 started
+[align2:70] Processor 2 thread 22405418284608 started
+[align2:70] Processor 3 thread 22405416183360 started
+[align2:70] Processor 5 thread 22405411980864 started
+[align2:70] Processor 10 thread 22405401474624 started
+[align2:70] Processor 8 thread 22405405677120 started
+[align2:70] Processor 7 thread 22405407778368 started
+[align2:70] Processor 11 thread 22405399373376 started
+[align2:70] Processor 14 thread 22405393069632 started
+[align2:70] Processor 12 thread 22405397272128 started
+[align2:70] Processor 13 thread 22405395170880 started
+[align2:70] Processor 4 thread 22405414082112 started
+[align2:70] Processor 9 thread 22405403575872 started
+[align2:70] Processor 6 thread 22405409879616 started
+[align2:70] Processor 15 thread 22405390968384 started
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 10 thread 22405401474624 done. Processed 7558826 reads. Skipped already processed: 18895 reads Aligned reads (passing E-value): 74979 Runtime sec: 288.541
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 11 thread 22405399373376 done. Processed 7559590 reads. Skipped already processed: 18185 reads Aligned reads (passing E-value): 74048 Runtime sec: 293.012
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 2 thread 22405418284608 done. Processed 7558612 reads. Skipped already processed: 19247 reads Aligned reads (passing E-value): 76192 Runtime sec: 293.566
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 6 thread 22405409879616 done. Processed 7558870 reads. Skipped already processed: 19038 reads Aligned reads (passing E-value): 75043 Runtime sec: 293.714
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 8 thread 22405405677120 done. Processed 7559044 reads. Skipped already processed: 18684 reads Aligned reads (passing E-value): 73317 Runtime sec: 295.161
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 4 thread 22405414082112 done. Processed 7558744 reads. Skipped already processed: 19172 reads Aligned reads (passing E-value): 75375 Runtime sec: 295.766
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 14 thread 22405393069632 done. Processed 7559384 reads. Skipped already processed: 18583 reads Aligned reads (passing E-value): 73994 Runtime sec: 296.464
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 12 thread 22405397272128 done. Processed 7558926 reads. Skipped already processed: 18976 reads Aligned reads (passing E-value): 74709 Runtime sec: 296.944
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 9 thread 22405403575872 done. Processed 7559572 reads. Skipped already processed: 18198 reads Aligned reads (passing E-value): 72847 Runtime sec: 297.442
+[next:455] EOF FWD reached. Total reads: 3788986
+[align2:133] Processor 15 thread 22405390968384 done. Processed 7559526 reads. Skipped already processed: 18176 reads Aligned reads (passing E-value): 73540 Runtime sec: 301.015
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 13 thread 22405395170880 done. Processed 7559642 reads. Skipped already processed: 18160 reads Aligned reads (passing E-value): 73904 Runtime sec: 302.028
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 3 thread 22405416183360 done. Processed 7559354 reads. Skipped already processed: 18386 reads Aligned reads (passing E-value): 73857 Runtime sec: 307.236
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 7 thread 22405407778368 done. Processed 7558736 reads. Skipped already processed: 19017 reads Aligned reads (passing E-value): 74236 Runtime sec: 307.396
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 0 thread 22405384664640 done. Processed 7559122 reads. Skipped already processed: 18793 reads Aligned reads (passing E-value): 73037 Runtime sec: 307.82
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 1 thread 22405386765888 done. Processed 7559138 reads. Skipped already processed: 18584 reads Aligned reads (passing E-value): 73588 Runtime sec: 312.311
+[next:455] EOF FWD reached. Total reads: 3788987
+[align2:133] Processor 5 thread 22405411980864 done. Processed 7559642 reads. Skipped already processed: 18253 reads Aligned reads (passing E-value): 74430 Runtime sec: 312.737
+[align:220] done index: 7 part: 1 in 312.737 sec Memory KB: 787
+[align:227] Index and References unloaded in 0.0227812 sec. Memory KB: 787
+[align:237] ==== Done alignment in 4827.98 sec ====
+
+[store_to_db:292] Stored Reads statistics to DB:
+     all_reads_count= 121247582 all_reads_len= 18187137300 min_read_len= 150 max_read_len= 150 total_aligned= 1485486 total_aligned_id= 0 total_aligned_cov= 0 total_aligned_id_cov= 0 total_denovo= 0 num_short= 0 reads_matched_per_db= TODO is_stats_calc= 0 is_total_reads_mapped_cov= 0
+
+[writeSummary:179] ==== Starting summary of alignment statistics ====
+[Refstats:60] Index Statistics calculation starts ... done in: 2.43909 sec
+[write:62] Using summary file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA.log
+[writeSummary:185] ==== Done summary in sec [2.4599] ====
+
+[writeReports:169] === Report generation starts ===
+[writeReports:184] Restored Readstats from DB: 1
+[Refstats:60] Index Statistics calculation starts ... done in: 2.31164 sec
+[validate_out_type:140] Output type: 
+1-file  2-files  paired  paired_in  paired_out  out2  sout  other  otype
+           +        +                  +           +           +     36
+[set_num_out:163] num_out: 2
+[init:60] num_out: 2
+[validate_out_type:140] Output type: 
+1-file  2-files  paired  paired_in  paired_out  out2  sout  other  otype
+           +        +                  +           +           +     36
+[set_num_out:163] num_out: 2
+[init:60] num_out: 2
+[writeReports:199] loading reference 0 part 1/1 ... done in 0.0303003 sec
+[report:93] Report Processor: 1 thread: 22405393069632 started. Memory KB: 787
+[report:93] Report Processor: 0 thread: 22405390968384 started. Memory KB: 787
+[report:93] Report Processor: 2 thread: 22405395170880 started. Memory KB: 787
+[report:93] Report Processor: 3 thread: 22405397272128 started. Memory KB: 787
+[report:93] Report Processor: 5 thread: 22405401474624 started. Memory KB: 787
+[report:93] Report Processor: 6 thread: 22405403575872 started. Memory KB: 787
+[report:93] Report Processor: 7 thread: 22405405677120 started. Memory KB: 787
+[report:93] Report Processor: 4 thread: 22405399373376 started. Memory KB: 787
+[report:93] Report Processor: 8 thread: 22405407778368 started. Memory KB: 787
+[report:93] Report Processor: 9 thread: 22405409879616 started. Memory KB: 787
+[report:93] Report Processor: 13 thread: 22405418284608 started. Memory KB: 787
+[report:93] Report Processor: 11 thread: 22405414082112 started. Memory KB: 787
+[report:93] Report Processor: 12 thread: 22405416183360 started. Memory KB: 787
+[report:93] Report Processor: 14 thread: 22405386765888 started. Memory KB: 787
+[report:93] Report Processor: 15 thread: 22405384664640 started. Memory KB: 787
+[report:93] Report Processor: 10 thread: 22405411980864 started. Memory KB: 787
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 6 thread: 22405403575872 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 787
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 0 thread: 22405390968384 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 787
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 4 thread: 22405399373376 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 787
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 1 thread: 22405393069632 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 2 thread: 22405395170880 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 7 thread: 22405405677120 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 14 thread: 22405386765888 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 12 thread: 22405416183360 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 5 thread: 22405401474624 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 8 thread: 22405407778368 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 9 thread: 22405409879616 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 3 thread: 22405397272128 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788986
+[next:455] EOF REV reached. Total reads: 3788986
+[report:152] Report processor: 15 thread: 22405384664640 done. Processed reads: 7577972 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 10 thread: 22405411980864 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 13 thread: 22405418284608 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[next:455] EOF FWD reached. Total reads: 3788987
+[next:455] EOF REV reached. Total reads: 3788987
+[report:152] Report processor: 11 thread: 22405414082112 done. Processed reads: 7577974 Invalid reads: 0 Memory KB: 788
+[writeReports:220] done reference 0 part: 1 in 348.909 sec
+[writeReports:226] references unloaded in 0.000877823 sec Memory KB: 788
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_1.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_1.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_1.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_2.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_2.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_2.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_3.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_3.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_3.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_4.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_4.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_4.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_5.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_5.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_5.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_6.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_6.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_6.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_7.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_7.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_7.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_8.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_8.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_8.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_9.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_9.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_9.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_10.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_10.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_10.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_11.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_11.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_11.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_12.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_12.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_12.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_13.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_13.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_13.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_14.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_14.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_14.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_15.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_15.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_15.fq.gz
+[strip_path_sfx:169] moving /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd_0.fq.gz -> "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_fwd.fq.gz"
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_1.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_1.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_1.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_2.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_2.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_2.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_3.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_3.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_3.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_4.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_4.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_4.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_5.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_5.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_5.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_6.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_6.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_6.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_7.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_7.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_7.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_8.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_8.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_8.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_9.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_9.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_9.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_10.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_10.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_10.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_11.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_11.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_11.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_12.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_12.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_12.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_13.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_13.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_13.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_14.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_14.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_14.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_15.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_15.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_15.fq.gz
+[strip_path_sfx:169] moving /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev_0.fq.gz -> "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61945960_2/HSF4_0H_2.rRNA_rev.fq.gz"
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_1.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_1.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_1.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_2.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_2.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_2.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_3.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_3.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_3.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_4.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_4.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_4.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_5.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_5.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_5.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_6.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_6.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_6.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_7.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_7.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_7.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_8.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_8.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_8.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_9.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_9.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_9.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_10.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_10.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_10.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_11.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_11.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_11.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_12.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_12.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_12.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_13.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_13.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_13.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_14.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_14.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_14.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_15.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_15.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_15.fq.gz
+[strip_path_sfx:169] moving /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd_0.fq.gz -> "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd.fq.gz"
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_1.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_1.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_1.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_2.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_2.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_2.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_3.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_3.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_3.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_4.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_4.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_4.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_5.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_5.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_5.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_6.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_6.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_6.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_7.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_7.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_7.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_8.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_8.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_8.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_9.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_9.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_9.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_10.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_10.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_10.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_11.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_11.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_11.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_12.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_12.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_12.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_13.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_13.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_13.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_14.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_14.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_14.fq.gz
+[openfr:129] Opened output file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_15.fq.gz for reading.
+[merge:83] merged /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_15.fq.gz -> /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz
+[merge:90] deleted /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_15.fq.gz
+[strip_path_sfx:169] moving /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev_0.fq.gz -> "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_rev.fq.gz"
+[writeReports:269] === done Reports in 507.409 sec ===
+
+[INFO] Pre-sync — fwd: 60299147  rev: 60299147
+[INFO] Already equal — skipping sync
+[INFO] Done: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_0H_2_fwd.fq.gz
