@@ -1,0 +1,87 @@
+[INFO] Sample: HSF4_2H_3
+[process:1393] === Options processing starts ... ===
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/bin/sortmerna
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-16s-id90.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-23s-id98.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-18s-id95.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-28s-id98.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5s-database-id98.fasta of previous flag: --ref
+Found flag: --ref
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5.8s-database-id98.fasta of previous flag: --ref
+Found flag: --reads
+Found value: 01_raw/fastq/HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_1.fq.gz of previous flag: --reads
+Found flag: --reads
+Found value: 01_raw/fastq/HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_2.fq.gz of previous flag: --reads
+Found flag: --fastx
+Previous flag: --fastx is Boolean. Setting to True
+Found flag: --paired_out
+Previous flag: --paired_out is Boolean. Setting to True
+Found flag: --out2
+Previous flag: --out2 is Boolean. Setting to True
+Found flag: --aligned
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6/HSF4_2H_3.rRNA of previous flag: --aligned
+Found flag: --other
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_2H_3 of previous flag: --other
+Found flag: --threads
+Found value: 8 of previous flag: --threads
+Found flag: --workdir
+Found value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6 of previous flag: --workdir
+[opt_workdir:995] Using WORKDIR: "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6" as specified
+[process:1483] Processing option: aligned with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6/HSF4_2H_3.rRNA
+[process:1483] Processing option: fastx with value: 
+[process:1483] Processing option: other with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_2H_3
+[process:1483] Processing option: out2 with value: 
+[process:1483] Processing option: paired_out with value: 
+[process:1483] Processing option: reads with value: 01_raw/fastq/HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_1.fq.gz
+[opt_reads:98] Processing reads file [1] out of total [2] files
+[process:1483] Processing option: reads with value: 01_raw/fastq/HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_2.fq.gz
+[opt_reads:98] Processing reads file [2] out of total [2] files
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta
+[opt_ref:158] Processing reference [1] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta
+[opt_ref:158] Processing reference [2] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-16s-id90.fasta
+[opt_ref:158] Processing reference [3] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-16s-id90.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-23s-id98.fasta
+[opt_ref:158] Processing reference [4] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-23s-id98.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-18s-id95.fasta
+[opt_ref:158] Processing reference [5] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-18s-id95.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-28s-id98.fasta
+[opt_ref:158] Processing reference [6] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-28s-id98.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5s-database-id98.fasta
+[opt_ref:158] Processing reference [7] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5s-database-id98.fasta" exists and is readable
+[process:1483] Processing option: ref with value: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5.8s-database-id98.fasta
+[opt_ref:158] Processing reference [8] out of total [8] references
+[opt_ref:206] File "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5.8s-database-id98.fasta" exists and is readable
+[process:1483] Processing option: threads with value: 8
+[process:1503] === Options processing done ===
+[process:1504] Alignment type: [best:1 num_alignments:1 min_lis:2 seeds:2]
+[validate_kvdbdir:1248] Key-value DB location "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6/kvdb"
+[validate_kvdbdir:1284] Creating KVDB directory: "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6/kvdb"
+[validate_idxdir:1214] Using index directory: "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6/idx"
+[validate_idxdir:1222] Created index directory - OK
+[validate_readb_dir:1306] Using split reads directory : "/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6/readb"
+[validate_readb_dir:1314] Created split reads directory - OK
+[main:62] Running command:
+/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/bin/sortmerna --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-16s-id90.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-bac-23s-id98.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-18s-id95.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-euk-28s-id98.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5s-database-id98.fasta --ref /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/rfam-5.8s-database-id98.fasta --reads 01_raw/fastq/HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_1.fq.gz --reads 01_raw/fastq/HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_2.fq.gz --fastx --paired_out --out2 --aligned /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6/HSF4_2H_3.rRNA --other /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_2H_3 --threads 8 --workdir /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6 
+[build_index:1123] ==== Index building started ====
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-16s-id95.fasta of size: 3893959 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6/idx/3436099190853847617
+  done.
+
+[build_index:1180] Begin indexing file /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/sortmerna/db/silva-arc-23s-id98.fasta of size: 752022 under index name /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/sortmerna_61918470_6/idx/34006853
