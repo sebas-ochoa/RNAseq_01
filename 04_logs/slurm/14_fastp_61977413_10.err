@@ -1,0 +1,48 @@
+Many modules are hidden in this stack. Use "module --show_hidden spider SOFTWARE" if you are not able to find the required software
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+GTTAAAATTAATTTATATGAAAAGTTTAAATAAAGAATTCGGCAAAAATAATATTCGCCT
+
+Read1 before filtering:
+total reads: 50498574
+total bases: 7574786100
+Q20 bases: 7530798510(99.4193%)
+Q30 bases: 7327418603(96.7343%)
+
+Read2 before filtering:
+total reads: 50498574
+total bases: 7574786100
+Q20 bases: 7508793991(99.1288%)
+Q30 bases: 7269081221(95.9642%)
+
+Read1 after filtering:
+total reads: 50232476
+total bases: 7517720400
+Q20 bases: 7480031357(99.4987%)
+Q30 bases: 7284631314(96.8995%)
+
+Read2 after filtering:
+total reads: 50232476
+total bases: 7502657104
+Q20 bases: 7451861653(99.323%)
+Q30 bases: 7225452099(96.3052%)
+
+Filtering result:
+reads passed filter: 100464952
+reads failed due to low quality: 326838
+reads failed due to too many N: 15778
+reads failed due to too short: 189580
+reads with adapter trimmed: 1791373
+bases trimmed due to adapters: 57665422
+
+Duplication rate: 30.6467%
+
+Insert size peak (evaluated by paired-end reads): 269
+
+JSON report: fastp.json
+HTML report: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/14_trim/HSF4_6H_1.fastp.html
+
+fastp -i /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_6H_1_fwd.fq.gz -I /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/12_sortmerna/HSF4_6H_1_rev.fq.gz -o /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/14_trim/HSF4_6H_1_1.trim.fq.gz -O /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/14_trim/HSF4_6H_1_2.trim.fq.gz --detect_adapter_for_pe --cut_tail --cut_window_size 4 --cut_mean_quality 20 --length_required 25 --thread 8 --html /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/14_trim/HSF4_6H_1.fastp.html 
+fastp v0.23.4, time used: 168 seconds

@@ -1,0 +1,4 @@
+Many modules are hidden in this stack. Use "module --show_hidden spider SOFTWARE" if you are not able to find the required software
+/var/spool/slurm/slurmd/state/job61981202/slurm_script: line 35: 2225890 Killed                  seqtk sample -s 100 "$R1" "$SUBSAMPLE_READS"
+     2225892 Done                    | gzip -c > "$OUT_R1"
+[2026-04-01T02:37:24.752+02:00] error: Detected 1 oom_kill event in StepId=61981202.batch. Some of the step tasks have been OOM Killed.
