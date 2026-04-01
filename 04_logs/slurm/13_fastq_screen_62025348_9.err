@@ -1,0 +1,17 @@
+Many modules are hidden in this stack. Use "module --show_hidden spider SOFTWARE" if you are not able to find the required software
+Using fastq_screen v0.16.0
+Reading configuration from '/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/fastq_screen/fastq_screen.conf'
+Using '/cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/bowtie2-2.5.1-u2j3omoiwrk3crf6nh7whpg3pa7vbuzf/bin/bowtie2' as Bowtie 2 path
+Adding database Drosophila
+Adding database Human
+Adding database E_coli
+Adding database PhiX
+Adding database Adapters
+Adding database Vectors
+Using 8 threads for searches
+Option --subset set to 100000 reads
+Processing HSF4_4H_3_fwd.fq.gz
+	Output HTML file 'HSF4_4H_3_fwd_screen.html' already exists
+	Output file 'HSF4_4H_3_fwd_screen.txt' already exists
+	Skipping HSF4_4H_3_fwd.fq.gz
+Processing complete

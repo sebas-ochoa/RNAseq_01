@@ -1,0 +1,130 @@
+Many modules are hidden in this stack. Use "module --show_hidden spider SOFTWARE" if you are not able to find the required software
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.6
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 12 BAM files                                     ||
+||                                                                            ||
+||                           HSF4_0H_1.sorted.bam                             ||
+||                           HSF4_0H_2.sorted.bam                             ||
+||                           HSF4_0H_3.sorted.bam                             ||
+||                           HSF4_2H_1.sorted.bam                             ||
+||                           HSF4_2H_2.sorted.bam                             ||
+||                           HSF4_2H_3.sorted.bam                             ||
+||                           HSF4_4H_1.sorted.bam                             ||
+||                           HSF4_4H_2.sorted.bam                             ||
+||                           HSF4_4H_3.sorted.bam                             ||
+||                           HSF4_6H_1.sorted.bam                             ||
+||                           HSF4_6H_2.sorted.bam                             ||
+||                           HSF4_6H_3.sorted.bam                             ||
+||                                                                            ||
+||             Output file : gene_counts.tsv                                  ||
+||                 Summary : gene_counts.tsv.summary                          ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : yes                                              ||
+||              Annotation : Drosophila_melanogaster.BDGP6.46.113.gtf (GTF)   ||
+||      Dir for temp files : /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1 ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file Drosophila_melanogaster.BDGP6.46.113.gtf ...          ||
+||    Features : 196625                                                       ||
+||    Meta-features : 24278                                                   ||
+||    Chromosomes/contigs : 29                                                ||
+||                                                                            ||
+|| Process BAM file HSF4_0H_1.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 53636735                                             ||
+||    Successfully assigned alignments : 45486183 (84.8%)                     ||
+||    Running time : 0.57 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_0H_2.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 53174941                                             ||
+||    Successfully assigned alignments : 45921738 (86.4%)                     ||
+||    Running time : 1.12 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_0H_3.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 54091936                                             ||
+||    Successfully assigned alignments : 45359125 (83.9%)                     ||
+||    Running time : 1.23 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_2H_1.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 53766816                                             ||
+||    Successfully assigned alignments : 45309723 (84.3%)                     ||
+||    Running time : 1.14 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_2H_2.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 53656373                                             ||
+||    Successfully assigned alignments : 45258458 (84.3%)                     ||
+||    Running time : 1.29 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_2H_3.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 52803847                                             ||
+||    Successfully assigned alignments : 45913708 (87.0%)                     ||
+||    Running time : 1.17 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_4H_1.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 53425806                                             ||
+||    Successfully assigned alignments : 45666649 (85.5%)                     ||
+||    Running time : 1.20 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_4H_2.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 52594544                                             ||
+||    Successfully assigned alignments : 45981107 (87.4%)                     ||
+||    Running time : 1.29 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_4H_3.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 52940064                                             ||
+||    Successfully assigned alignments : 45974909 (86.8%)                     ||
+||    Running time : 1.18 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_6H_1.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 52635222                                             ||
+||    Successfully assigned alignments : 46021336 (87.4%)                     ||
+||    Running time : 1.25 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_6H_2.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 53062197                                             ||
+||    Successfully assigned alignments : 45859299 (86.4%)                     ||
+||    Running time : 1.22 minutes                                             ||
+||                                                                            ||
+|| Process BAM file HSF4_6H_3.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 53330639                                             ||
+||    Successfully assigned alignments : 45636823 (85.6%)                     ||
+||    Running time : 1.19 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/nfs/nas22/fs2202/biol_  ||
+|| bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/18  ||
+|| _featurecounts/gene_counts.tsv.summary"                                    ||
+||                                                                            ||
+\\============================================================================//
+
