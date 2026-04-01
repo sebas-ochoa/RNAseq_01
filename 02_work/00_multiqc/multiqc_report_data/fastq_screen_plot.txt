@@ -1,0 +1,13 @@
+Sample	Drosophila	Human	Vectors	Multiple Genomes	No hits
+HSF4_0H_1_fwd_screen	98823.0	1.0	0.0	1171.0	70.0
+HSF4_0H_2_fwd_screen	98942.0	1.0	0.0	976.0	79.0
+HSF4_0H_3_fwd_screen	98725.0	3.0	1.0	1133.0	89.0
+HSF4_2H_1_fwd_screen	98929.0	2.0	1.0	900.0	99.0
+HSF4_2H_2_fwd_screen	98905.0	0.0	0.0	960.0	99.0
+HSF4_2H_3_fwd_screen	99087.0	0.0	0.0	908.0	90.0
+HSF4_4H_1_fwd_screen	98948.0	0.0	1.0	870.0	89.0
+HSF4_4H_2_fwd_screen	99034.0	1.0	0.0	959.0	100.0
+HSF4_4H_3_fwd_screen	98997.0	1.0	0.0	886.0	79.0
+HSF4_6H_1_fwd_screen	98945.0	0.0	0.0	973.0	79.0
+HSF4_6H_2_fwd_screen	98859.0	0.0	0.0	979.0	89.0
+HSF4_6H_3_fwd_screen	98983.0	0.0	0.0	1003.0	100.0

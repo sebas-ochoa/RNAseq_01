@@ -1,0 +1,5 @@
+Sample	FastQC	BamQC	FastQ Screen
+BamQC		2.3	
+FastQ Screen			0.16.0
+FastQC	0.12.1		
+QualiMap		2.3	

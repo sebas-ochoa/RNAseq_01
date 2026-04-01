@@ -1,0 +1,625 @@
+[2026-04-01 15:50:24,493] root                                               [DEBUG  ]  Logging to file: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/62025714/tmpj6xqjpgn/multiqc.log
+[2026-04-01 15:50:24,513] multiqc.core.update_config                         [DEBUG  ]  This is MultiQC v1.33
+[2026-04-01 15:50:24,514] multiqc.core.update_config                         [DEBUG  ]  Running Python 3.11.6 (main, Jun 20 2024, 16:12:48) [GCC 12.2.0]
+[2026-04-01 15:50:24,532] multiqc.core.update_config                         [DEBUG  ]  Ignoring files, directories and paths that match: */star_index/*
+[2026-04-01 15:50:24,549] urllib3.connectionpool                             [DEBUG  ]  Starting new HTTPS connection (1): api.multiqc.info:443
+[2026-04-01 15:50:24,589] multiqc.core.version_check                         [DEBUG  ]  Could not connect to multiqc.info for version check: HTTPSConnectionPool(host='api.multiqc.info', port=443): Max retries exceeded with url: /version?version_multiqc=1.33&version_python=3.11.6&operating_system=Linux&is_docker=False&is_singularity=False&is_conda=False&is_uv=False&is_ci=False&is_notebook=False&ai_summary=False&ai_summary_full=False&ai_provider=seqera (Caused by NewConnectionError("HTTPSConnection(host='api.multiqc.info', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+[2026-04-01 15:50:24,589] multiqc.multiqc                                    [DEBUG  ]  Working dir : /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25
+[2026-04-01 15:50:24,589] multiqc.multiqc                                    [DEBUG  ]  Template    : default
+[2026-04-01 15:50:24,670] multiqc.multiqc                                    [DEBUG  ]  Command used: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/00_admin/env/multiqc_venv/bin/multiqc 02_work/ -o /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/00_multiqc --filename multiqc_report.html --ignore */star_index/* -f
+[2026-04-01 15:50:24,670] multiqc.core.file_search                           [INFO   ]  Search path: /nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work
+[2026-04-01 15:50:24,672] multiqc.core.file_search                           [DEBUG  ]  Analysing modules: bases2fastq, cellranger_arc, cells2stats, ribotish, seqkit, sompy, xenium, custom_content, ccs, ngsderive, purple, conpair, isoseq, lima, peddy, percolator, haplocheck, somalier, methylqa, mosdepth, phantompeakqualtools, qualimap, bamdst, preseq, hifiasm, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, checkm, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, glimpse, gopeaks, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featurecounts, fgbio, dragen, dragen_fastqc, dedup, pbmarkdup, damageprofiler, mapdamage, biobambam2, jcvi, mtnucratio, picard, vep, bakta, prokka, checkm2, qc3C, nanoq, nanostat, samblaster, samtools, bamtools, sambamba, ngsbits, pairtools, sexdeterrmine, seqera_cli, eigenstratdatabasetools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, umicollapse, umitools, truvari, megahit, ganon, gtdbtk, bbmap, bismark, biscuit, diamond, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, hostile, cellranger, snpsplit, odgi, vg, pangolin, nextclade, freyja, humid, kat, leehom, librarian, nonpareil, adapterremoval, bbduk, clipandmerge, cutadapt, flexbar, sourmash, kaiju, kraken, malt, motus, trimmomatic, sickle, skewer, sortmerna, biobloomtools, seqfu, fastq_screen, afterqc, fastp, fastqc, sequali, filtlong, prinseqplusplus, pychopper, porechop, pycoqc, minionqc, anglerfish, multivcfanalyzer, clusterflow, checkqc, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype, whatshap, spaceranger, xenome, xengsort, metaphlan, sylphtax, seqwho, telseq, ataqv, mgikit, mosaicatcher, software_versions
+[2026-04-01 15:50:24,672] multiqc.core.file_search                           [DEBUG  ]  Search keys: adapterremoval, afterqc, anglerfish, ataqv, bakta, bamdst, bamtools, bases2fastq, bbduk, bbmap, bcftools, bcl2fastq, bclconvert, biobambam2, biobloomtools, biscuit, bismark, bowtie1, bowtie2, busco, bustools, ccs, cellranger, cellranger_arc, cells2stats, checkm, checkm2, checkqc, clipandmerge, clusterflow, conpair, custom_content, cutadapt, damageprofiler, dedup, deeptools, diamond, disambiguate, dragen, dragen_fastqc, eigenstratdatabasetools, fastp, fastq_screen, fastqc, featurecounts, fgbio, filtlong, flash, flexbar, freyja, ganon, gatk, gffcompare, glimpse, goleft_indexcov, gopeaks, gtdbtk, haplocheck, happy, hicexplorer, hicpro, hicup, hifiasm, hisat2, homer, hops, hostile, htseq, humid, interop, isoseq, ivar, jcvi, jellyfish, kaiju, kallisto, kat, kraken, leehom, librarian, lima, longranger, macs2, malt, mapdamage, megahit, metaphlan, methylqa, mgikit, minionqc, mirtop, mirtrace, mosaicatcher, mosdepth, motus, mtnucratio, multiqc_data, multivcfanalyzer, nanoq, nanostat, nextclade, ngsbits, ngsderive, nonpareil, odgi, optitype, pairtools, pangolin, pbmarkdup, peddy, percolator, phantompeakqualtools, picard, porechop, preseq, prinseqplusplus, prokka, purple, pychopper, pycoqc, qc3C, qorts, qualimap, quast, ribotish, rna_seqc, rockhopper, rsem, rseqc, salmon, sambamba, samblaster, samtools, sargasso, seqera_cli, seqfu, seqkit, sequali, seqwho, seqyclean, sexdeterrmine, sickle, skewer, slamdunk, snippy, snpeff, snpsplit, software_versions, somalier, sompy, sortmerna, sourmash, spaceranger, stacks, star, supernova, sylphtax, telseq, theta2, tophat, trimmomatic, truvari, umicollapse, umitools, varscan2, vcftools, vep, verifybamid, vg, whatshap, xengsort, xenium, xenome
+[2026-04-01 15:50:59,641] multiqc.report                                     [DEBUG  ]  Summary of files that were skipped by the search: |skipped_module_specific_max_filesize: 672|, |skipped_no_match: 1451|, |skipped_ignore_pattern: 29|, |skipped_filesize_limit: 124|
+[2026-04-01 15:50:59,720] multiqc.base_module                                [DEBUG  ]  Couldn't read file as utf-8: multiqc.parquet, will attempt to skip non-unicode characters
+'utf-8' codec can't decode byte 0xcc in position 7: invalid continuation byte
+[2026-04-01 15:50:59,736] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading report data from parquet file: 02_work/03_qc_trim/multiqc/multiqc_report_data/multiqc.parquet
+[2026-04-01 15:51:00,956] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading module FastQC from parquet
+[2026-04-01 15:51:00,956] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Extracting software versions from HTML content in parquet file
+[2026-04-01 15:51:00,956] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Collected software version: FastQC = 0.12.1
+[2026-04-01 15:51:00,956] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Skipping Software Versions module from parquet file - extracted data to global software_versions
+[2026-04-01 15:51:00,956] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading global software versions data from parquet file
+[2026-04-01 15:51:01,494] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_counts_plot, type: BarPlotInputData
+[2026-04-01 15:51:01,495] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc_sequence_counts_plot, adding new data
+[2026-04-01 15:51:01,504] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_base_sequence_quality_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:01,504] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc_per_base_sequence_quality_plot, adding new data
+[2026-04-01 15:51:01,512] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_sequence_quality_scores_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:01,512] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc_per_sequence_quality_scores_plot, adding new data
+[2026-04-01 15:51:01,626] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_sequence_gc_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:01,626] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc_per_sequence_gc_content_plot, adding new data
+[2026-04-01 15:51:01,634] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_base_n_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:01,634] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc_per_base_n_content_plot, adding new data
+[2026-04-01 15:51:01,640] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_length_distribution_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:01,640] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc_sequence_length_distribution_plot, adding new data
+[2026-04-01 15:51:01,647] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_duplication_levels_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:01,647] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc_sequence_duplication_levels_plot, adding new data
+[2026-04-01 15:51:01,654] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_top_overrepresented_sequences_table, type: ViolinPlotInputData
+[2026-04-01 15:51:01,654] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc_top_overrepresented_sequences_table, adding new data
+[2026-04-01 15:51:01,665] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_adapter_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:01,665] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc_adapter_content_plot, adding new data
+[2026-04-01 15:51:01,666] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc-status-check-heatmap, type: HeatmapNormalizedInputData
+[2026-04-01 15:51:01,666] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for fastqc-status-check-heatmap, adding new data
+[2026-04-01 15:51:01,670] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for general_stats_table, type: ViolinPlotInputData
+[2026-04-01 15:51:01,670] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for general_stats_table, adding new data
+[2026-04-01 15:51:01,749] multiqc.base_module                                [DEBUG  ]  Couldn't read file as utf-8: multiqc.parquet, will attempt to skip non-unicode characters
+'utf-8' codec can't decode byte 0xfa in position 7: invalid start byte
+[2026-04-01 15:51:01,778] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading report data from parquet file: 02_work/multiqc_all/multiqc_report_data/multiqc.parquet
+[2026-04-01 15:51:01,797] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading module QualiMap from parquet
+[2026-04-01 15:51:01,798] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading module RSeQC from parquet
+[2026-04-01 15:51:01,798] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading module featureCounts from parquet
+[2026-04-01 15:51:01,799] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading module STAR from parquet
+[2026-04-01 15:51:01,799] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Updating module "FastQC" with data from parquet
+[2026-04-01 15:51:01,800] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Extracting software versions from HTML content in parquet file
+[2026-04-01 15:51:01,800] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Skipping Software Versions module from parquet file - extracted data to global software_versions
+[2026-04-01 15:51:01,800] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading global software versions data from parquet file
+[2026-04-01 15:51:01,816] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_base_sequence_quality_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:01,816] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_base_sequence_quality_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:01,816] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_base_sequence_quality_plot
+[2026-04-01 15:51:01,903] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (864, 13), New: (1776, 13)
+[2026-04-01 15:51:01,931] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:01,971] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:01,972] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1776, 13)
+[2026-04-01 15:51:02,009] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:02,009] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_base_sequence_quality_plot
+[2026-04-01 15:51:02,024] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_sequence_quality_scores_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,024] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_sequence_quality_scores_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:02,024] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_sequence_quality_scores_plot
+[2026-04-01 15:51:02,037] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (552, 13), New: (1274, 13)
+[2026-04-01 15:51:02,037] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:02,038] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:02,038] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1274, 13)
+[2026-04-01 15:51:02,056] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:02,056] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_sequence_quality_scores_plot
+[2026-04-01 15:51:02,111] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_sequence_gc_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,112] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_sequence_gc_content_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:02,112] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_sequence_gc_content_plot
+[2026-04-01 15:51:02,222] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (4848, 13), New: (9696, 13)
+[2026-04-01 15:51:02,223] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (96, 2)
+[2026-04-01 15:51:02,224] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:02,224] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (9696, 13)
+[2026-04-01 15:51:02,336] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 2 datasets, 48 samples
+[2026-04-01 15:51:02,336] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_sequence_gc_content_plot
+[2026-04-01 15:51:02,356] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_base_n_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,356] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_base_n_content_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:02,356] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_base_n_content_plot
+[2026-04-01 15:51:02,375] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (864, 13), New: (1776, 13)
+[2026-04-01 15:51:02,376] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:02,376] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:02,377] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1776, 13)
+[2026-04-01 15:51:02,396] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:02,396] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_base_n_content_plot
+[2026-04-01 15:51:02,403] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_length_distribution_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,403] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_sequence_length_distribution_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:02,403] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_sequence_length_distribution_plot
+[2026-04-01 15:51:02,411] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (576, 13), New: (576, 13)
+[2026-04-01 15:51:02,412] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (24, 2)
+[2026-04-01 15:51:02,412] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:02,412] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (576, 13)
+[2026-04-01 15:51:02,420] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 24 samples
+[2026-04-01 15:51:02,421] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_sequence_length_distribution_plot
+[2026-04-01 15:51:02,433] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_duplication_levels_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,434] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_sequence_duplication_levels_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:02,434] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_sequence_duplication_levels_plot
+[2026-04-01 15:51:02,443] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (384, 13), New: (768, 13)
+[2026-04-01 15:51:02,443] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:02,444] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:02,444] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (768, 13)
+[2026-04-01 15:51:02,460] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:02,460] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_sequence_duplication_levels_plot
+[2026-04-01 15:51:02,463] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_top_overrepresented_sequences_table, type: ViolinPlotInputData
+[2026-04-01 15:51:02,463] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_top_overrepresented_sequences_table, merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:02,500] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_top_overrepresented_sequences_table
+[2026-04-01 15:51:02,531] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_adapter_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,531] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_adapter_content_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:02,531] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_adapter_content_plot
+[2026-04-01 15:51:02,578] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1680, 13), New: (5528, 13)
+[2026-04-01 15:51:02,579] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (76, 2)
+[2026-04-01 15:51:02,580] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:02,580] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (5528, 13)
+[2026-04-01 15:51:02,622] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 76 samples
+[2026-04-01 15:51:02,622] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_adapter_content_plot
+[2026-04-01 15:51:02,625] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc-status-check-heatmap, type: HeatmapNormalizedInputData
+[2026-04-01 15:51:02,625] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc-status-check-heatmap, merging HeatmapNormalizedInputData with HeatmapNormalizedInputData
+[2026-04-01 15:51:02,625] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc-status-check-heatmap
+[2026-04-01 15:51:02,633] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for general_stats_table, type: ViolinPlotInputData
+[2026-04-01 15:51:02,634] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for general_stats_table, merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:02,653] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for general_stats_table
+[2026-04-01 15:51:02,663] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for star_summary_table, type: ViolinPlotInputData
+[2026-04-01 15:51:02,663] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for star_summary_table, adding new data
+[2026-04-01 15:51:02,690] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for qualimap_coverage_histogram, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,690] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for qualimap_coverage_histogram, adding new data
+[2026-04-01 15:51:02,816] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for qualimap_genome_fraction, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,816] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for qualimap_genome_fraction, adding new data
+[2026-04-01 15:51:02,834] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for qualimap_insert_size, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,835] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for qualimap_insert_size, adding new data
+[2026-04-01 15:51:02,841] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for qualimap_gc_content, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,841] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for qualimap_gc_content, adding new data
+[2026-04-01 15:51:02,842] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for rseqc_infer_experiment_plot, type: BarPlotInputData
+[2026-04-01 15:51:02,842] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for rseqc_infer_experiment_plot, adding new data
+[2026-04-01 15:51:02,843] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for featureCounts_assignment_plot, type: BarPlotInputData
+[2026-04-01 15:51:02,844] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for featureCounts_assignment_plot, adding new data
+[2026-04-01 15:51:02,852] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for star_summary_table, type: ViolinPlotInputData
+[2026-04-01 15:51:02,853] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for star_summary_table, merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:02,869] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for star_summary_table
+[2026-04-01 15:51:02,870] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for star_alignment_plot, type: BarPlotInputData
+[2026-04-01 15:51:02,870] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  No existing plot input data for star_alignment_plot, adding new data
+[2026-04-01 15:51:02,871] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_counts_plot, type: BarPlotInputData
+[2026-04-01 15:51:02,871] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_sequence_counts_plot, merging BarPlotInputData with BarPlotInputData
+[2026-04-01 15:51:02,895] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_sequence_counts_plot
+[2026-04-01 15:51:02,910] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_base_sequence_quality_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,911] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_base_sequence_quality_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:02,911] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_base_sequence_quality_plot
+[2026-04-01 15:51:02,933] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1776, 13), New: (1776, 13)
+[2026-04-01 15:51:02,933] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:02,934] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:02,934] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1776, 13)
+[2026-04-01 15:51:02,952] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:02,952] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_base_sequence_quality_plot
+[2026-04-01 15:51:02,966] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_sequence_quality_scores_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:02,966] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_sequence_quality_scores_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:02,966] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_sequence_quality_scores_plot
+[2026-04-01 15:51:02,982] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1274, 13), New: (1274, 13)
+[2026-04-01 15:51:02,982] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:02,983] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:02,983] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1274, 13)
+[2026-04-01 15:51:02,999] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:02,999] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_sequence_quality_scores_plot
+[2026-04-01 15:51:03,136] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_sequence_gc_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:03,136] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_sequence_gc_content_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:03,136] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_sequence_gc_content_plot
+[2026-04-01 15:51:03,366] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (9696, 13), New: (19392, 13)
+[2026-04-01 15:51:03,370] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (96, 2)
+[2026-04-01 15:51:03,373] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (9696, 13)
+[2026-04-01 15:51:03,380] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (29088, 13)
+[2026-04-01 15:51:03,623] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 2 datasets, 48 samples
+[2026-04-01 15:51:03,623] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_sequence_gc_content_plot
+[2026-04-01 15:51:03,640] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_base_n_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:03,641] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_base_n_content_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:03,641] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_base_n_content_plot
+[2026-04-01 15:51:03,666] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1776, 13), New: (1776, 13)
+[2026-04-01 15:51:03,666] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:03,667] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:03,667] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1776, 13)
+[2026-04-01 15:51:03,684] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:03,685] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_base_n_content_plot
+[2026-04-01 15:51:03,696] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_length_distribution_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:03,696] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_sequence_length_distribution_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:03,696] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_sequence_length_distribution_plot
+[2026-04-01 15:51:03,704] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (576, 13), New: (600, 13)
+[2026-04-01 15:51:03,704] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:03,705] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:03,705] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (600, 13)
+[2026-04-01 15:51:03,717] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:03,718] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_sequence_length_distribution_plot
+[2026-04-01 15:51:03,730] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_duplication_levels_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:03,730] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_sequence_duplication_levels_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:03,730] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_sequence_duplication_levels_plot
+[2026-04-01 15:51:03,742] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (768, 13), New: (768, 13)
+[2026-04-01 15:51:03,743] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:03,743] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:03,744] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (768, 13)
+[2026-04-01 15:51:03,759] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:03,760] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_sequence_duplication_levels_plot
+[2026-04-01 15:51:03,762] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_top_overrepresented_sequences_table, type: ViolinPlotInputData
+[2026-04-01 15:51:03,762] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_top_overrepresented_sequences_table, merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:03,767] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_top_overrepresented_sequences_table
+[2026-04-01 15:51:03,797] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_adapter_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:03,797] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_adapter_content_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:03,797] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_adapter_content_plot
+[2026-04-01 15:51:03,871] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (5528, 13), New: (5528, 13)
+[2026-04-01 15:51:03,872] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (76, 2)
+[2026-04-01 15:51:03,873] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:03,873] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (5528, 13)
+[2026-04-01 15:51:03,919] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 76 samples
+[2026-04-01 15:51:03,919] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_adapter_content_plot
+[2026-04-01 15:51:03,923] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc-status-check-heatmap, type: HeatmapNormalizedInputData
+[2026-04-01 15:51:03,924] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc-status-check-heatmap, merging HeatmapNormalizedInputData with HeatmapNormalizedInputData
+[2026-04-01 15:51:03,925] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc-status-check-heatmap
+[2026-04-01 15:51:03,941] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for general_stats_table, type: ViolinPlotInputData
+[2026-04-01 15:51:03,941] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for general_stats_table, merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:03,990] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for general_stats_table
+[2026-04-01 15:51:04,079] multiqc.base_module                                [DEBUG  ]  Couldn't read file as utf-8: multiqc.parquet, will attempt to skip non-unicode characters
+'utf-8' codec can't decode byte 0xa8 in position 7: invalid start byte
+[2026-04-01 15:51:04,088] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading report data from parquet file: 02_work/05_align/multiqc/multiqc_report_data/multiqc.parquet
+[2026-04-01 15:51:04,100] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Updating module "STAR" with data from parquet
+[2026-04-01 15:51:04,100] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading global software versions data from parquet file
+[2026-04-01 15:51:04,108] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for star_summary_table, type: ViolinPlotInputData
+[2026-04-01 15:51:04,108] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for star_summary_table, merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:04,125] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for star_summary_table
+[2026-04-01 15:51:04,127] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for star_alignment_plot, type: BarPlotInputData
+[2026-04-01 15:51:04,127] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for star_alignment_plot, merging BarPlotInputData with BarPlotInputData
+[2026-04-01 15:51:04,135] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for star_alignment_plot
+[2026-04-01 15:51:04,138] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for general_stats_table, type: ViolinPlotInputData
+[2026-04-01 15:51:04,138] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for general_stats_table, merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:04,165] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for general_stats_table
+[2026-04-01 15:51:04,215] multiqc.base_module                                [DEBUG  ]  Couldn't read file as utf-8: multiqc.parquet, will attempt to skip non-unicode characters
+'utf-8' codec can't decode byte 0xf4 in position 7: invalid continuation byte
+[2026-04-01 15:51:04,225] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading report data from parquet file: 02_work/01_qc_raw/multiqc/multiqc_report_data/multiqc.parquet
+[2026-04-01 15:51:04,238] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Updating module "FastQC" with data from parquet
+[2026-04-01 15:51:04,238] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Extracting software versions from HTML content in parquet file
+[2026-04-01 15:51:04,238] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Collected software version: FastQC = 0.12.1
+[2026-04-01 15:51:04,238] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Skipping Software Versions module from parquet file - extracted data to global software_versions
+[2026-04-01 15:51:04,238] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading global software versions data from parquet file
+[2026-04-01 15:51:04,240] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_counts_plot, type: BarPlotInputData
+[2026-04-01 15:51:04,240] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_sequence_counts_plot, merging BarPlotInputData with BarPlotInputData
+[2026-04-01 15:51:04,257] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_sequence_counts_plot
+[2026-04-01 15:51:04,265] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_base_sequence_quality_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:04,266] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_base_sequence_quality_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:04,266] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_base_sequence_quality_plot
+[2026-04-01 15:51:04,285] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1776, 13), New: (912, 13)
+[2026-04-01 15:51:04,285] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (24, 2)
+[2026-04-01 15:51:04,286] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (864, 13)
+[2026-04-01 15:51:04,286] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1776, 13)
+[2026-04-01 15:51:04,304] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:04,305] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_base_sequence_quality_plot
+[2026-04-01 15:51:04,368] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_sequence_quality_scores_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:04,368] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_sequence_quality_scores_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:04,368] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_sequence_quality_scores_plot
+[2026-04-01 15:51:04,382] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1274, 13), New: (722, 13)
+[2026-04-01 15:51:04,382] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (24, 2)
+[2026-04-01 15:51:04,383] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (552, 13)
+[2026-04-01 15:51:04,383] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1274, 13)
+[2026-04-01 15:51:04,402] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:04,402] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_sequence_quality_scores_plot
+[2026-04-01 15:51:04,426] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_sequence_gc_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:04,427] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_sequence_gc_content_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:04,427] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_sequence_gc_content_plot
+[2026-04-01 15:51:04,731] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (29088, 13), New: (4848, 13)
+[2026-04-01 15:51:04,732] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (48, 2)
+[2026-04-01 15:51:04,735] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (14544, 13)
+[2026-04-01 15:51:04,735] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (19392, 13)
+[2026-04-01 15:51:04,928] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 2 datasets, 48 samples
+[2026-04-01 15:51:04,928] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_sequence_gc_content_plot
+[2026-04-01 15:51:04,936] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_per_base_n_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:04,938] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_per_base_n_content_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:04,938] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_base_n_content_plot
+[2026-04-01 15:51:04,952] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1776, 13), New: (912, 13)
+[2026-04-01 15:51:04,952] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (24, 2)
+[2026-04-01 15:51:04,953] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (864, 13)
+[2026-04-01 15:51:04,953] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1776, 13)
+[2026-04-01 15:51:04,969] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:04,970] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_per_base_n_content_plot
+[2026-04-01 15:51:04,975] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_sequence_duplication_levels_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:04,975] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_sequence_duplication_levels_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:04,976] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_sequence_duplication_levels_plot
+[2026-04-01 15:51:04,982] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (768, 13), New: (384, 13)
+[2026-04-01 15:51:04,983] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (24, 2)
+[2026-04-01 15:51:04,983] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (384, 13)
+[2026-04-01 15:51:04,983] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (768, 13)
+[2026-04-01 15:51:04,996] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 48 samples
+[2026-04-01 15:51:04,996] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_sequence_duplication_levels_plot
+[2026-04-01 15:51:04,998] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_top_overrepresented_sequences_table, type: ViolinPlotInputData
+[2026-04-01 15:51:04,998] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_top_overrepresented_sequences_table, merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:05,001] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_top_overrepresented_sequences_table
+[2026-04-01 15:51:05,019] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc_adapter_content_plot, type: LinePlotNormalizedInputData
+[2026-04-01 15:51:05,019] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc_adapter_content_plot, merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:05,019] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_adapter_content_plot
+[2026-04-01 15:51:05,071] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (5528, 13), New: (3848, 13)
+[2026-04-01 15:51:05,071] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (52, 2)
+[2026-04-01 15:51:05,072] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (1680, 13)
+[2026-04-01 15:51:05,072] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (5528, 13)
+[2026-04-01 15:51:05,104] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 76 samples
+[2026-04-01 15:51:05,104] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc_adapter_content_plot
+[2026-04-01 15:51:05,106] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for fastqc-status-check-heatmap, type: HeatmapNormalizedInputData
+[2026-04-01 15:51:05,106] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for fastqc-status-check-heatmap, merging HeatmapNormalizedInputData with HeatmapNormalizedInputData
+[2026-04-01 15:51:05,106] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for fastqc-status-check-heatmap
+[2026-04-01 15:51:05,109] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Loading plot input data for general_stats_table, type: ViolinPlotInputData
+[2026-04-01 15:51:05,109] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Found existing plot input data for general_stats_table, merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:05,132] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Successfully merged plot input data for general_stats_table
+[2026-04-01 15:51:05,133] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Processed 1 versions for FastQC: 0.12.1
+[2026-04-01 15:51:05,133] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Processed 1 versions for BamQC: 2.3
+[2026-04-01 15:51:06,214] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc_sequence_counts_plot
+[2026-04-01 15:51:06,351] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc_per_base_sequence_quality_plot
+[2026-04-01 15:51:06,373] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc_per_sequence_quality_scores_plot
+[2026-04-01 15:51:06,448] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc_per_sequence_gc_content_plot
+[2026-04-01 15:51:06,466] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc_per_base_n_content_plot
+[2026-04-01 15:51:06,476] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc_sequence_length_distribution_plot
+[2026-04-01 15:51:06,487] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc_sequence_duplication_levels_plot
+[2026-04-01 15:51:06,534] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc_top_overrepresented_sequences_table
+[2026-04-01 15:51:06,572] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc_adapter_content_plot
+[2026-04-01 15:51:06,617] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for fastqc-status-check-heatmap
+[2026-04-01 15:51:06,648] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for general_stats_table
+[2026-04-01 15:51:06,668] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for star_summary_table
+[2026-04-01 15:51:06,694] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for qualimap_coverage_histogram
+[2026-04-01 15:51:06,717] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for qualimap_genome_fraction
+[2026-04-01 15:51:06,829] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for qualimap_insert_size
+[2026-04-01 15:51:06,841] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for qualimap_gc_content
+[2026-04-01 15:51:06,852] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for rseqc_infer_experiment_plot
+[2026-04-01 15:51:06,864] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for featureCounts_assignment_plot
+[2026-04-01 15:51:06,875] multiqc.core.special_case_modules.load_multiqc_data [DEBUG  ]  Created plot object for star_alignment_plot
+[2026-04-01 15:51:06,877] multiqc.core.exec_modules                          [DEBUG  ]  Running module: custom_content
+[2026-04-01 15:51:06,928] multiqc.core.exec_modules                          [DEBUG  ]  No samples found: custom_content
+[2026-04-01 15:51:06,928] multiqc.core.exec_modules                          [DEBUG  ]  Running module: qualimap
+[2026-04-01 15:51:07,426] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_2H_1
+[2026-04-01 15:51:07,453] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_0H_3
+[2026-04-01 15:51:07,485] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_6H_2
+[2026-04-01 15:51:07,516] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_6H_1
+[2026-04-01 15:51:07,542] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_0H_1
+[2026-04-01 15:51:07,578] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_2H_3
+[2026-04-01 15:51:07,612] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_4H_3
+[2026-04-01 15:51:07,652] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_2H_2
+[2026-04-01 15:51:07,668] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_6H_3
+[2026-04-01 15:51:07,699] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_4H_1
+[2026-04-01 15:51:07,735] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_0H_2
+[2026-04-01 15:51:07,777] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: HSF4_4H_2
+[2026-04-01 15:51:07,819] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_qualimap_bamqc_genome_results.txt
+[2026-04-01 15:51:07,846] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_qualimap_bamqc_genome_results.json
+[2026-04-01 15:51:08,951] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_2H_1
+[2026-04-01 15:51:09,072] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_0H_3
+[2026-04-01 15:51:09,198] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_6H_2
+[2026-04-01 15:51:09,321] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_6H_1
+[2026-04-01 15:51:09,444] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_0H_1
+[2026-04-01 15:51:09,583] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_2H_3
+[2026-04-01 15:51:09,713] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_4H_3
+[2026-04-01 15:51:09,824] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_2H_2
+[2026-04-01 15:51:09,955] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_6H_3
+[2026-04-01 15:51:10,068] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_4H_1
+[2026-04-01 15:51:10,180] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_0H_2
+[2026-04-01 15:51:10,297] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: HSF4_4H_2
+[2026-04-01 15:51:10,618] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_2H_1
+[2026-04-01 15:51:10,630] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_0H_3
+[2026-04-01 15:51:10,658] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_6H_2
+[2026-04-01 15:51:10,671] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_6H_1
+[2026-04-01 15:51:10,686] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_0H_1
+[2026-04-01 15:51:10,719] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_2H_3
+[2026-04-01 15:51:10,741] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_4H_3
+[2026-04-01 15:51:10,766] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_2H_2
+[2026-04-01 15:51:10,778] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_6H_3
+[2026-04-01 15:51:10,790] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_4H_1
+[2026-04-01 15:51:10,824] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_0H_2
+[2026-04-01 15:51:10,870] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: HSF4_4H_2
+[2026-04-01 15:51:11,022] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_2H_1
+[2026-04-01 15:51:11,033] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_0H_3
+[2026-04-01 15:51:11,043] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_6H_2
+[2026-04-01 15:51:11,054] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_6H_1
+[2026-04-01 15:51:11,064] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_0H_1
+[2026-04-01 15:51:11,075] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_2H_3
+[2026-04-01 15:51:11,086] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_4H_3
+[2026-04-01 15:51:11,096] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_2H_2
+[2026-04-01 15:51:11,107] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_6H_3
+[2026-04-01 15:51:11,117] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_4H_1
+[2026-04-01 15:51:11,128] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_0H_2
+[2026-04-01 15:51:11,138] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: HSF4_4H_2
+[2026-04-01 15:51:11,543] multiqc.config                                     [DEBUG  ]  Using default coverage thresholds: 1, 5, 10, 30, 50
+[2026-04-01 15:51:12,015] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_coverage_histogram: found old_data = True
+[2026-04-01 15:51:12,015] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_coverage_histogram: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:12,015] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor qualimap_coverage_histogram
+[2026-04-01 15:51:12,081] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (6000, 13), New: (6000, 13)
+[2026-04-01 15:51:12,082] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (12, 2)
+[2026-04-01 15:51:12,083] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:12,083] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (6000, 13)
+[2026-04-01 15:51:12,108] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 12 samples
+[2026-04-01 15:51:12,109] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_coverage_histogram: merge completed
+[2026-04-01 15:51:12,142] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_genome_fraction: found old_data = True
+[2026-04-01 15:51:12,142] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_genome_fraction: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:12,142] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor qualimap_genome_fraction
+[2026-04-01 15:51:12,201] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (4668, 13), New: (4668, 13)
+[2026-04-01 15:51:12,202] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (12, 2)
+[2026-04-01 15:51:12,202] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:12,203] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (4668, 13)
+[2026-04-01 15:51:12,222] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 12 samples
+[2026-04-01 15:51:12,223] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_genome_fraction: merge completed
+[2026-04-01 15:51:12,314] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_insert_size: found old_data = True
+[2026-04-01 15:51:12,315] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_insert_size: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:12,315] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor qualimap_insert_size
+[2026-04-01 15:51:12,380] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (6000, 13), New: (6000, 13)
+[2026-04-01 15:51:12,381] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (12, 2)
+[2026-04-01 15:51:12,382] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:12,382] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (6000, 13)
+[2026-04-01 15:51:12,405] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 12 samples
+[2026-04-01 15:51:12,405] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_insert_size: merge completed
+[2026-04-01 15:51:12,433] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_gc_content: found old_data = True
+[2026-04-01 15:51:12,434] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_gc_content: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:12,434] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor qualimap_gc_content
+[2026-04-01 15:51:12,449] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1200, 13), New: (1200, 13)
+[2026-04-01 15:51:12,449] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (12, 2)
+[2026-04-01 15:51:12,450] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:12,450] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1200, 13)
+[2026-04-01 15:51:12,458] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 12 samples
+[2026-04-01 15:51:12,458] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for qualimap_gc_content: merge completed
+[2026-04-01 15:51:12,491] multiqc.modules.qualimap.qualimap                  [INFO   ]  Found 12 BamQC reports
+[2026-04-01 15:51:12,494] multiqc.core.exec_modules                          [INFO   ]  Updating module "QualiMap"
+[2026-04-01 15:51:12,495] multiqc.core.exec_modules                          [DEBUG  ]  Running module: rseqc
+[2026-04-01 15:51:12,777] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_rseqc_infer_experiment.txt
+[2026-04-01 15:51:12,801] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_rseqc_infer_experiment.json
+[2026-04-01 15:51:12,802] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for rseqc_infer_experiment_plot: found old_data = True
+[2026-04-01 15:51:12,802] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for rseqc_infer_experiment_plot: merging BarPlotInputData with BarPlotInputData
+[2026-04-01 15:51:12,809] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for rseqc_infer_experiment_plot: merge completed
+[2026-04-01 15:51:12,822] multiqc.modules.rseqc.rseqc                        [INFO   ]  Found 12 infer_experiment reports
+[2026-04-01 15:51:12,843] multiqc.core.exec_modules                          [INFO   ]  Updating module "RSeQC"
+[2026-04-01 15:51:12,843] multiqc.core.exec_modules                          [DEBUG  ]  Running module: htseq
+[2026-04-01 15:51:15,227] multiqc.core.exec_modules                          [DEBUG  ]  No samples found: htseq
+[2026-04-01 15:51:15,227] multiqc.core.exec_modules                          [DEBUG  ]  Running module: featurecounts
+[2026-04-01 15:51:15,311] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_0H_1
+[2026-04-01 15:51:15,311] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_0H_2
+[2026-04-01 15:51:15,311] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_0H_3
+[2026-04-01 15:51:15,311] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_2H_1
+[2026-04-01 15:51:15,312] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_2H_2
+[2026-04-01 15:51:15,312] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_2H_3
+[2026-04-01 15:51:15,312] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_4H_1
+[2026-04-01 15:51:15,312] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_4H_2
+[2026-04-01 15:51:15,312] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_4H_3
+[2026-04-01 15:51:15,312] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_6H_1
+[2026-04-01 15:51:15,312] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_6H_2
+[2026-04-01 15:51:15,313] multiqc.modules.featurecounts.featurecounts        [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_6H_3
+[2026-04-01 15:51:15,313] multiqc.modules.featurecounts.featurecounts        [INFO   ]  Found 12 reports
+[2026-04-01 15:51:15,338] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_featurecounts.txt
+[2026-04-01 15:51:15,363] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_featurecounts.json
+[2026-04-01 15:51:15,365] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for featureCounts_assignment_plot: found old_data = True
+[2026-04-01 15:51:15,365] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for featureCounts_assignment_plot: merging BarPlotInputData with BarPlotInputData
+[2026-04-01 15:51:15,375] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for featureCounts_assignment_plot: merge completed
+[2026-04-01 15:51:15,389] multiqc.core.exec_modules                          [INFO   ]  Updating module "featureCounts"
+[2026-04-01 15:51:15,389] multiqc.core.exec_modules                          [DEBUG  ]  Running module: snippy
+[2026-04-01 15:51:15,471] multiqc.core.exec_modules                          [DEBUG  ]  No samples found: snippy
+[2026-04-01 15:51:15,471] multiqc.core.exec_modules                          [DEBUG  ]  Running module: star
+[2026-04-01 15:51:15,573] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_0H_1
+[2026-04-01 15:51:15,594] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_0H_2
+[2026-04-01 15:51:15,620] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_0H_3
+[2026-04-01 15:51:15,641] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_2H_1
+[2026-04-01 15:51:15,662] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_2H_2
+[2026-04-01 15:51:15,683] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_2H_3
+[2026-04-01 15:51:15,704] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_4H_1
+[2026-04-01 15:51:15,725] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_4H_2
+[2026-04-01 15:51:15,746] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_4H_3
+[2026-04-01 15:51:15,767] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_6H_1
+[2026-04-01 15:51:15,788] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_6H_2
+[2026-04-01 15:51:15,809] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: HSF4_6H_3
+[2026-04-01 15:51:15,809] multiqc.modules.star.star                          [INFO   ]  Found 12 reports
+[2026-04-01 15:51:15,835] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_star.txt
+[2026-04-01 15:51:15,861] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_star.json
+[2026-04-01 15:51:15,868] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for star_summary_table: found old_data = True
+[2026-04-01 15:51:15,868] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for star_summary_table: merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:15,885] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for star_summary_table: merge completed
+[2026-04-01 15:51:15,904] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for star_alignment_plot: found old_data = True
+[2026-04-01 15:51:15,904] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for star_alignment_plot: merging BarPlotInputData with BarPlotInputData
+[2026-04-01 15:51:15,912] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for star_alignment_plot: merge completed
+[2026-04-01 15:51:15,924] multiqc.core.exec_modules                          [INFO   ]  Updating module "STAR"
+[2026-04-01 15:51:15,924] multiqc.core.exec_modules                          [DEBUG  ]  Running module: fastq_screen
+[2026-04-01 15:51:16,111] multiqc.modules.fastq_screen.fastq_screen          [INFO   ]  Found 12 reports
+[2026-04-01 15:51:16,112] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastq_screen_plot: found old_data = False
+[2026-04-01 15:51:16,112] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastq_screen_plot: no old data or empty, using new data only
+[2026-04-01 15:51:16,150] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_fastq_screen.txt
+[2026-04-01 15:51:16,175] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_fastq_screen.json
+[2026-04-01 15:51:16,175] multiqc.base_module                                [DEBUG  ]  fastq_screen: deleting attribute self.fq_screen_data
+[2026-04-01 15:51:16,175] multiqc.base_module                                [DEBUG  ]  fastq_screen: deleting attribute self.num_orgs
+[2026-04-01 15:51:16,175] multiqc.core.exec_modules                          [DEBUG  ]  Running module: fastqc
+[2026-04-01 15:51:16,628] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_0H_1_ZKRN250030468-1A_23F5KYLT4_L8_1_fastqc.zip' as already parsed 'HSF4_0H_1_ZKRN250030468-1A_23F5KYLT4_L8_1'
+[2026-04-01 15:51:16,694] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_0H_1_ZKRN250030468-1A_23F5KYLT4_L8_2_fastqc.zip' as already parsed 'HSF4_0H_1_ZKRN250030468-1A_23F5KYLT4_L8_2'
+[2026-04-01 15:51:17,029] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_1_fastqc.zip' as already parsed 'HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_1'
+[2026-04-01 15:51:17,099] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_2_fastqc.zip' as already parsed 'HSF4_0H_2_ZKRN250030469-1A_23F5KYLT4_L8_2'
+[2026-04-01 15:51:17,425] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_0H_3_ZKRN250030470-1A_23F5KYLT4_L8_1_fastqc.zip' as already parsed 'HSF4_0H_3_ZKRN250030470-1A_23F5KYLT4_L8_1'
+[2026-04-01 15:51:17,482] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_0H_3_ZKRN250030470-1A_23F5KYLT4_L8_2_fastqc.zip' as already parsed 'HSF4_0H_3_ZKRN250030470-1A_23F5KYLT4_L8_2'
+[2026-04-01 15:51:17,776] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_2H_1_ZKRN250030471-1A_23F5KYLT4_L8_1_fastqc.zip' as already parsed 'HSF4_2H_1_ZKRN250030471-1A_23F5KYLT4_L8_1'
+[2026-04-01 15:51:17,843] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_2H_1_ZKRN250030471-1A_23F5KYLT4_L8_2_fastqc.zip' as already parsed 'HSF4_2H_1_ZKRN250030471-1A_23F5KYLT4_L8_2'
+[2026-04-01 15:51:18,166] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_2H_2_ZKRN250030472-1A_23F5KYLT4_L8_1_fastqc.zip' as already parsed 'HSF4_2H_2_ZKRN250030472-1A_23F5KYLT4_L8_1'
+[2026-04-01 15:51:18,224] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_2H_2_ZKRN250030472-1A_23F5KYLT4_L8_2_fastqc.zip' as already parsed 'HSF4_2H_2_ZKRN250030472-1A_23F5KYLT4_L8_2'
+[2026-04-01 15:51:18,574] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_1_fastqc.zip' as already parsed 'HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_1'
+[2026-04-01 15:51:18,638] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_2_fastqc.zip' as already parsed 'HSF4_2H_3_ZKRN250030473-1A_23F5KYLT4_L8_2'
+[2026-04-01 15:51:18,980] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_4H_1_ZKRN250030474-1A_23F5KYLT4_L7_1_fastqc.zip' as already parsed 'HSF4_4H_1_ZKRN250030474-1A_23F5KYLT4_L7_1'
+[2026-04-01 15:51:19,042] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_4H_1_ZKRN250030474-1A_23F5KYLT4_L7_2_fastqc.zip' as already parsed 'HSF4_4H_1_ZKRN250030474-1A_23F5KYLT4_L7_2'
+[2026-04-01 15:51:19,366] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_4H_2_ZKRN250030475-1A_23F5KYLT4_L7_1_fastqc.zip' as already parsed 'HSF4_4H_2_ZKRN250030475-1A_23F5KYLT4_L7_1'
+[2026-04-01 15:51:19,423] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_4H_2_ZKRN250030475-1A_23F5KYLT4_L7_2_fastqc.zip' as already parsed 'HSF4_4H_2_ZKRN250030475-1A_23F5KYLT4_L7_2'
+[2026-04-01 15:51:19,743] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_4H_3_ZKRN250030476-1A_23F5KYLT4_L7_1_fastqc.zip' as already parsed 'HSF4_4H_3_ZKRN250030476-1A_23F5KYLT4_L7_1'
+[2026-04-01 15:51:19,798] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_4H_3_ZKRN250030476-1A_23F5KYLT4_L7_2_fastqc.zip' as already parsed 'HSF4_4H_3_ZKRN250030476-1A_23F5KYLT4_L7_2'
+[2026-04-01 15:51:20,120] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_6H_1_ZKRN250030477-1A_23F5KYLT4_L7_1_fastqc.zip' as already parsed 'HSF4_6H_1_ZKRN250030477-1A_23F5KYLT4_L7_1'
+[2026-04-01 15:51:20,183] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_6H_1_ZKRN250030477-1A_23F5KYLT4_L7_2_fastqc.zip' as already parsed 'HSF4_6H_1_ZKRN250030477-1A_23F5KYLT4_L7_2'
+[2026-04-01 15:51:20,503] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_6H_2_ZKRN250030478-1A_23F5KYLT4_L7_1_fastqc.zip' as already parsed 'HSF4_6H_2_ZKRN250030478-1A_23F5KYLT4_L7_1'
+[2026-04-01 15:51:20,561] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_6H_2_ZKRN250030478-1A_23F5KYLT4_L7_2_fastqc.zip' as already parsed 'HSF4_6H_2_ZKRN250030478-1A_23F5KYLT4_L7_2'
+[2026-04-01 15:51:20,895] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_6H_3_ZKRN250030479-1A_23F5KYLT4_L7_1_fastqc.zip' as already parsed 'HSF4_6H_3_ZKRN250030479-1A_23F5KYLT4_L7_1'
+[2026-04-01 15:51:20,962] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'HSF4_6H_3_ZKRN250030479-1A_23F5KYLT4_L7_2_fastqc.zip' as already parsed 'HSF4_6H_3_ZKRN250030479-1A_23F5KYLT4_L7_2'
+[2026-04-01 15:51:20,962] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 72 reports
+[2026-04-01 15:51:20,964] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_sequence_counts_plot: found old_data = True
+[2026-04-01 15:51:20,964] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_sequence_counts_plot: merging BarPlotInputData with BarPlotInputData
+[2026-04-01 15:51:20,989] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_sequence_counts_plot: merge completed
+[2026-04-01 15:51:21,024] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_base_sequence_quality_plot: found old_data = True
+[2026-04-01 15:51:21,024] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_base_sequence_quality_plot: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:21,024] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_base_sequence_quality_plot
+[2026-04-01 15:51:21,056] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1776, 13), New: (2688, 13)
+[2026-04-01 15:51:21,057] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (72, 2)
+[2026-04-01 15:51:21,057] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:21,058] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (2688, 13)
+[2026-04-01 15:51:21,084] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 72 samples
+[2026-04-01 15:51:21,085] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_base_sequence_quality_plot: merge completed
+[2026-04-01 15:51:21,122] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_sequence_quality_scores_plot: found old_data = True
+[2026-04-01 15:51:21,122] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_sequence_quality_scores_plot: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:21,122] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_sequence_quality_scores_plot
+[2026-04-01 15:51:21,142] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1274, 13), New: (1826, 13)
+[2026-04-01 15:51:21,142] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (72, 2)
+[2026-04-01 15:51:21,143] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:21,143] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1826, 13)
+[2026-04-01 15:51:21,166] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 72 samples
+[2026-04-01 15:51:21,166] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_sequence_quality_scores_plot: merge completed
+[2026-04-01 15:51:21,283] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_sequence_gc_content_plot: found old_data = True
+[2026-04-01 15:51:21,284] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_sequence_gc_content_plot: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:21,284] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_sequence_gc_content_plot
+[2026-04-01 15:51:21,594] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (19392, 13), New: (14544, 13)
+[2026-04-01 15:51:21,595] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (144, 2)
+[2026-04-01 15:51:21,597] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (19392, 13)
+[2026-04-01 15:51:21,597] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (33936, 13)
+[2026-04-01 15:51:21,830] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 2 datasets, 72 samples
+[2026-04-01 15:51:21,830] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_sequence_gc_content_plot: merge completed
+[2026-04-01 15:51:22,036] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_base_n_content_plot: found old_data = True
+[2026-04-01 15:51:22,036] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_base_n_content_plot: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:22,036] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_per_base_n_content_plot
+[2026-04-01 15:51:22,062] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (1776, 13), New: (2688, 13)
+[2026-04-01 15:51:22,063] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (72, 2)
+[2026-04-01 15:51:22,064] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:22,064] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (2688, 13)
+[2026-04-01 15:51:22,088] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 72 samples
+[2026-04-01 15:51:22,088] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_per_base_n_content_plot: merge completed
+[2026-04-01 15:51:22,124] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_sequence_length_distribution_plot: found old_data = True
+[2026-04-01 15:51:22,124] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_sequence_length_distribution_plot: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:22,124] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_sequence_length_distribution_plot
+[2026-04-01 15:51:22,135] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (600, 13), New: (1224, 13)
+[2026-04-01 15:51:22,136] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (72, 2)
+[2026-04-01 15:51:22,137] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:22,137] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1224, 13)
+[2026-04-01 15:51:22,156] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 72 samples
+[2026-04-01 15:51:22,156] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_sequence_length_distribution_plot: merge completed
+[2026-04-01 15:51:22,183] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_sequence_duplication_levels_plot: found old_data = True
+[2026-04-01 15:51:22,183] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_sequence_duplication_levels_plot: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:22,183] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_sequence_duplication_levels_plot
+[2026-04-01 15:51:22,196] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (768, 13), New: (1152, 13)
+[2026-04-01 15:51:22,197] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (72, 2)
+[2026-04-01 15:51:22,197] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:22,197] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (1152, 13)
+[2026-04-01 15:51:22,219] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 72 samples
+[2026-04-01 15:51:22,219] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_sequence_duplication_levels_plot: merge completed
+[2026-04-01 15:51:22,236] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_top_overrepresented_sequences_table: found old_data = True
+[2026-04-01 15:51:22,237] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_top_overrepresented_sequences_table: merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:22,241] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_top_overrepresented_sequences_table: merge completed
+[2026-04-01 15:51:22,296] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_adapter_content_plot: found old_data = True
+[2026-04-01 15:51:22,296] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_adapter_content_plot: merging LinePlotNormalizedInputData with LinePlotNormalizedInputData
+[2026-04-01 15:51:22,296] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge called for anchor fastqc_adapter_content_plot
+[2026-04-01 15:51:22,377] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: both old and new data present, merging. Old: (5528, 13), New: (7304, 13)
+[2026-04-01 15:51:22,378] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: new_keys shape: (100, 2)
+[2026-04-01 15:51:22,379] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: old_df_filtered shape: (0, 13)
+[2026-04-01 15:51:22,379] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: merged_df shape: (7304, 13)
+[2026-04-01 15:51:22,426] multiqc.plots.linegraph                            [DEBUG  ]  LinePlot merge: created result with 1 datasets, 100 samples
+[2026-04-01 15:51:22,426] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc_adapter_content_plot: merge completed
+[2026-04-01 15:51:22,465] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc-status-check-heatmap: found old_data = True
+[2026-04-01 15:51:22,466] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc-status-check-heatmap: merging HeatmapNormalizedInputData with HeatmapNormalizedInputData
+[2026-04-01 15:51:22,466] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for fastqc-status-check-heatmap: merge completed
+[2026-04-01 15:51:22,529] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_fastqc.txt
+[2026-04-01 15:51:22,557] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_fastqc.json
+[2026-04-01 15:51:22,561] multiqc.base_module                                [DEBUG  ]  fastqc: deleting attribute self.order_of_duplication_levels
+[2026-04-01 15:51:22,561] multiqc.base_module                                [DEBUG  ]  fastqc: deleting attribute self.status_colours
+[2026-04-01 15:51:22,561] multiqc.core.exec_modules                          [INFO   ]  Updating module "FastQC"
+[2026-04-01 15:51:22,561] multiqc.core.software_versions                     [DEBUG  ]  Reading software versions from config.software_versions
+[2026-04-01 15:51:22,646] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_software_versions.txt
+[2026-04-01 15:51:22,646] multiqc.core.write_results                         [DEBUG  ]  Rendering plots
+[2026-04-01 15:51:22,925] multiqc.plots.table_object                         [DEBUG  ]  Table key 'percentage_aligned_on_target' not found in data for 'general_stats_table'. Skipping. Check for possible typos between data keys and header keys
+[2026-04-01 15:51:22,926] multiqc.plots.table_object                         [DEBUG  ]  Table key 'regions_size' not found in data for 'general_stats_table'. Skipping. Check for possible typos between data keys and header keys
+[2026-04-01 15:51:22,926] multiqc.plots.table_object                         [DEBUG  ]  Table key 'regions_mapped_reads' not found in data for 'general_stats_table'. Skipping. Check for possible typos between data keys and header keys
+[2026-04-01 15:51:22,926] multiqc.plots.table_object                         [DEBUG  ]  Table key 'duplicated_reads_flagged' not found in data for 'general_stats_table'. Skipping. Check for possible typos between data keys and header keys
+[2026-04-01 15:51:22,939] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for general_stats_table: found old_data = True
+[2026-04-01 15:51:22,939] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for general_stats_table: merging ViolinPlotInputData with ViolinPlotInputData
+[2026-04-01 15:51:22,985] multiqc.plots.plot                                 [DEBUG  ]  merge_with_previous for general_stats_table: merge completed
+[2026-04-01 15:51:23,102] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_general_stats.txt
+[2026-04-01 15:51:23,129] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_general_stats.json
+[2026-04-01 15:51:23,309] multiqc.core.ai                                    [DEBUG  ]  Saved AI prompt to multiqc_data/llms-full.txt
+[2026-04-01 15:51:23,323] multiqc.core.write_results                         [DEBUG  ]  Exporting plot data to files
+[2026-04-01 15:51:23,363] multiqc.report                                     [DEBUG  ]  Wrote data file qualimap_coverage_histogram.txt
+[2026-04-01 15:51:23,403] multiqc.report                                     [DEBUG  ]  Wrote data file qualimap_genome_fraction.txt
+[2026-04-01 15:51:23,445] multiqc.report                                     [DEBUG  ]  Wrote data file qualimap_insert_size.txt
+[2026-04-01 15:51:23,475] multiqc.report                                     [DEBUG  ]  Wrote data file qualimap_gc_content.txt
+[2026-04-01 15:51:23,500] multiqc.report                                     [DEBUG  ]  Wrote data file rseqc_infer_experiment_plot.txt
+[2026-04-01 15:51:23,526] multiqc.report                                     [DEBUG  ]  Wrote data file featureCounts_assignment_plot.txt
+[2026-04-01 15:51:23,551] multiqc.report                                     [DEBUG  ]  Wrote data file star_summary_table.txt
+[2026-04-01 15:51:23,577] multiqc.report                                     [DEBUG  ]  Wrote data file star_alignment_plot.txt
+[2026-04-01 15:51:23,602] multiqc.report                                     [DEBUG  ]  Wrote data file fastq_screen_plot.txt
+[2026-04-01 15:51:23,627] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_sequence_counts_plot.txt
+[2026-04-01 15:51:23,661] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_per_base_sequence_quality_plot.txt
+[2026-04-01 15:51:23,691] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_per_sequence_quality_scores_plot.txt
+[2026-04-01 15:51:23,775] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_per_sequence_gc_content_plot_Percentages.txt
+[2026-04-01 15:51:23,863] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_per_sequence_gc_content_plot_Counts.txt
+[2026-04-01 15:51:23,898] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_per_base_n_content_plot.txt
+[2026-04-01 15:51:23,927] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_sequence_length_distribution_plot.txt
+[2026-04-01 15:51:23,957] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_sequence_duplication_levels_plot.txt
+[2026-04-01 15:51:23,982] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_top_overrepresented_sequences_table.txt
+[2026-04-01 15:51:24,032] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc_adapter_content_plot.txt
+[2026-04-01 15:51:24,058] multiqc.report                                     [DEBUG  ]  Wrote data file fastqc-status-check-heatmap.txt
+[2026-04-01 15:51:24,062] multiqc.core.write_results                         [DEBUG  ]  Moving data file from '/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/90_scratch/tmp/62025714/tmpj6xqjpgn/multiqc_data' to '/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/00_multiqc/multiqc_report_data'
+[2026-04-01 15:51:26,589] multiqc.core.write_results                         [INFO   ]  Data        : 02_work/00_multiqc/multiqc_report_data
+[2026-04-01 15:51:30,258] multiqc.core.write_results                         [DEBUG  ]  Compressing plot data
+[2026-04-01 15:51:31,716] multiqc.core.write_results                         [INFO   ]  Report      : 02_work/00_multiqc/multiqc_report.html

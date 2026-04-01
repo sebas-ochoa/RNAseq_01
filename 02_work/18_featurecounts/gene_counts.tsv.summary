@@ -1,0 +1,15 @@
+Status	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_0H_1.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_0H_2.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_0H_3.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_2H_1.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_2H_2.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_2H_3.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_4H_1.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_4H_2.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_4H_3.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_6H_1.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_6H_2.sorted.bam	/nfs/nas22/fs2202/biol_bc_jagannathan_comp_1/Sebastian/013.0_RNAseq_hsf4_14d29_0-6h25/02_work/17_star/HSF4_6H_3.sorted.bam
+Assigned	45486183	45921738	45359125	45309723	45258458	45913708	45666649	45981107	45974909	46021336	45859299	45636823
+Unassigned_Unmapped	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Read_Type	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Singleton	45	66	61	81	66	45	44	230	103	147	56	33
+Unassigned_MappingQuality	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_MultiMapping	5753654	5027091	6451098	6035176	6000853	4537759	5545943	4361467	4749760	4439017	5034062	5446879
+Unassigned_Secondary	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_NonSplit	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_NoFeatures	704523	563508	657241	769235	769590	538366	636274	580779	528998	540465	536764	603111
+Unassigned_Overlapping_Length	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Ambiguity	1692330	1662538	1624411	1652601	1627406	1813969	1576896	1670961	1686294	1634257	1632016	1643793
